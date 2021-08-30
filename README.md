@@ -4,7 +4,11 @@
 
 ## Setup
 ```echo ".cfg" >> .gitignore```
+
 ```git clone <remote-git-repo-url> $HOME/.cfg```
+
 ```alias config='/usr/bin/git --git-dir=<path to .cfg’s Git directory> --work-tree=$HOME'```
+
 ```config config --local status.showUntrackedFiles no```
+
 ```config checkout```
