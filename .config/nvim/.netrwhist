@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/raphael/dev/private/robotercopy/electron'
+let g:netrw_dirhist_1='scp://th_schurianFtp@www.adcomo.at//'
+let g:netrw_dirhist_0='scp://th_schurianFtp@www.adcomo.at//web/'
+let g:netrw_dirhist_9='sftp://th_schurianFtp@www.adcomo.at//web/'
+let g:netrw_dirhist_8='ftp://th_schurianFtp@www.adcomo.at//web/'
+let g:netrw_dirhist_7='sftp://th_schurianFtp@www.adcomo.at//'
+let g:netrw_dirhist_6='ftp://th_schurianFtp@www.adcomo.at//'
+let g:netrw_dirhist_5='ftp://th_schurianFtp@www.adcomo.at/'
+let g:netrw_dirhist_4='ftp://th_schurianFtp@www.adcomo.at//web/'
+let g:netrw_dirhist_3='ftp://th_schurianFtp@www.adcomo.at/web/'
