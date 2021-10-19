@@ -46,10 +46,11 @@ bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+# bindsum Mod1+Shift+q kill # same with ctrl (Mod1) for Mac RDP
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -show drun -sidebar-mode"
@@ -195,8 +196,10 @@ exec_always /home/raphael/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/wallpaper1.jpg
 
 # Keyboard - Remap CapsLock to ESC
-exec_always xmodmap -e "clear lock" #disable caps lock switch
-exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+exec_always --no-startup-id sh -c 'sleep 30 && xmodmap ~/.Xmodmap' #disable caps lock switch
+
+# Nextcloud background execution
+exec_always --no-startup-id nextcloud --background &
 
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
