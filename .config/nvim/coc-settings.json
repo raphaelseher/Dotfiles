@@ -1,17 +1,26 @@
 {
-    "codeLens.enable": true,
-    "diagnostic.errorSign": "E",
-	"diagnostic.warningSign": "!",
-	"diagnostic.infoSign": "●",
-	"diagnostic.hintSign": "●",
-    "suggest.enablePreview": true,
-	"coc.preferences.colorSupport": true,
-	"coc.preferences.semanticTokensHighlights": true,
-	"clangd.semanticHighlighting": true,
-	"clangd.fallbackFlags": [ "-std=c++17" ],
-	"clangd.checkUpdates": true,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
-    "languageserver":{
-  }
+  "coc.preferences.formatOnSaveFiletypes": [
+    "php",
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python"
+  ],
+  "codeLens.enable": true,
+  "diagnostic.errorSign": "E",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "●",
+  "suggest.enablePreview": true,
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.semanticTokensHighlights": true,
+  "clangd.semanticHighlighting": true,
+  "clangd.fallbackFlags": ["-std=c++17"],
+  "clangd.checkUpdates": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  "languageserver": {}
 }
-
