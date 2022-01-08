@@ -153,6 +153,12 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+nmap <leader>+  :vertical resize +5<CR>
+nmap <leader>-  :vertical resize -5<CR> 
+
+nmap <leader>h+  resize +5<CR>
+nmap <leader>h-  resize -5<CR> 
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

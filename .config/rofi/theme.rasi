@@ -14,8 +14,8 @@ configuration {
   
   fg: #FFFFFF;
 
-  primary: #D90452;
-  primary-dark: #BF046B33;
+  primary: #458588;
+  primary-dark: #45858833;
   secondary: #D90452;
 
   background-color: @bg;

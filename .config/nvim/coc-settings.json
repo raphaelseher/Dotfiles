@@ -1,15 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "php",
-    "css",
-    "markdown",
-    "javascript",
-    "graphql",
-    "html",
-    "yaml",
-    "json",
-    "python"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
   "codeLens.enable": true,
   "diagnostic.errorSign": "E",
   "diagnostic.warningSign": "!",
