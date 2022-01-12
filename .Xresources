@@ -29,10 +29,3 @@
 *color7:  #a89984
 *color15: #ebdbb2
 
-! Custom UI Colors
- ui.primary: #D90452                                                                                    
- ui.primary-dark: #BF046B                                                                               
- ui.primary-darker: #8C0368                                                                             
- ui.secondary: #F2A057                                                                                  
- ui.background: #060126                                                                                 
- ui.background-light: #150259  

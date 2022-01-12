@@ -36,7 +36,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html',  'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-clangd']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-phpls']
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Typescript
@@ -46,6 +46,9 @@ Plug 'peitalin/vim-jsx-typescript'
 " C++
 Plug 'rhysd/vim-clang-format', {'for' : ['c', 'cpp']}
 Plug 'vim-syntastic/syntastic'
+Plug 'puremourning/vimspector', {
+  \ 'do': 'python3 install_gadget.py --enable-vscode-cpptools'
+  \ }
 
 call plug#end()
 
@@ -78,10 +81,13 @@ let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
-      "tsx", "json", "html", "cpp", "typescript", "css", "scss"
+      "tsx", "json", "html", "cpp", "typescript", "css", "scss", "php"
       }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = {}, -- List of parsers to ignore installing
@@ -146,6 +152,12 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>+  :vertical resize +5<CR>
+nmap <leader>-  :vertical resize -5<CR> 
+
+nmap <leader>h+  resize +5<CR>
+nmap <leader>h-  resize -5<CR> 
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

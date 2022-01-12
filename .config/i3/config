@@ -182,18 +182,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh &
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#    status_command i3status
-#    position top
-#}
-
-# Launch Polybar
-exec_always /home/raphael/.config/polybar/launch.sh
+bar {
+    status_command i3status --config ~/.config/i3status/i3status.conf
+    position top
+}
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/wallpaper1.jpg
+exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/kurzgesagt3.jpg
 
 # Keyboard - Remap CapsLock to ESC
 exec_always --no-startup-id sh -c 'sleep 30 && xmodmap ~/.Xmodmap' #disable caps lock switch
@@ -203,18 +204,18 @@ exec_always --no-startup-id nextcloud --background &
 
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
-for_window[class="Bitwarden"] floating enable
 for_window[class="bkCashTerm"] floating enable
 
 # Styling
-default_border pixel 1
+# removes title of windows
+default_border pixel 1 
 
 # .Xresources color variables
-set_from_resource $primary ui.primary #333333
-set_from_resource $primary_dark ui.primary-darker #999999 
-set_from_resource $background background #000000
-set_from_resource $foreground foreground #FFFFFF
+# set_from_resource $primary ui.primary #333333
+# set_from_resource $primary_dark ui.primary-darker #999999 
+# set_from_resource $background background #000000
+# set_from_resource $foreground foreground #FFFFFF
 
 # Styling               border  backgr. text    indicator child_border
-client.focused          $primary $primary $background $primary_dark $primary
-client.background       $background
+# client.focused          $primary $primary $background $primary_dark $primary
+# client.background       $background

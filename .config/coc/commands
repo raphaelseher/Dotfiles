@@ -1,2 +1,3 @@
+prettier.formatFile
 clangd.switchSourceHeader
 clangd.install
