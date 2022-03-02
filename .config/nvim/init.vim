@@ -1,6 +1,6 @@
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set expandtab 
+set expandtab
 set smartindent
 set exrc
 set nu
@@ -28,6 +28,7 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'morhetz/gruvbox'
@@ -39,16 +40,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-phpls']
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
-" Typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-
 " C++
+Plug 'dense-analysis/ale'
 Plug 'rhysd/vim-clang-format', {'for' : ['c', 'cpp']}
-Plug 'vim-syntastic/syntastic'
 Plug 'puremourning/vimspector', {
   \ 'do': 'python3 install_gadget.py --enable-vscode-cpptools'
   \ }
+
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
@@ -69,17 +68,24 @@ let g:NERDTreeStatusline = ''
 let g:clang_format#auto_format=1
 let g:clang_format#code_style = 'google'
 
-" Syntastic
-let g:syntastic_cpp_checkers = ['cpplint', 'cppcheck', 'cpp']
-let g:syntastic_c_checkers = ['cpplint']
-let g:syntastic_cpp_compiler = "g++"
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_cppcheck_exec = 'cppcheck'
-let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
+let g:ale_disable_lsp = 1
+let g:ale_linters = {
+    \ 'python': ['pylint'],
+    \ 'php': ['phpcbf', 'php_cs_fixer'],
+    \ 'vim': ['vint'],
+    \ 'cpp': [ 'cpplint', 'cppcheck', 'clangtidy', 'clazy'],
+\}
 
-" The following two lines are optional. Configure it to your liking!
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ale_fix_on_save = 1
+let b:ale_fixers = {
+            \'*': ['remove_trailing_lines', 'trim_whitespace'],
+            \'javascript': ['prettier', 'eslint']
+            \}
+
+let g:ale_sign_column_always = 1
+let g:ale_echo_cursor = 1
+let g:ale_sign_error = 'E>'
+let g:ale_sign_warning = 'W-'
 
 " Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -154,10 +160,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>+  :vertical resize +5<CR>
-nmap <leader>-  :vertical resize -5<CR> 
+nmap <leader>-  :vertical resize -5<CR>
 
 nmap <leader>h+  resize +5<CR>
-nmap <leader>h-  resize -5<CR> 
+nmap <leader>h-  resize -5<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
