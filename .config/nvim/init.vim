@@ -55,9 +55,9 @@ Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 syntax enable
-colorscheme gruvbox
+" colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
-" colorscheme deep-space
+colorscheme deep-space
 " colorscheme onehalfdark
 set background=dark
 set termguicolors
