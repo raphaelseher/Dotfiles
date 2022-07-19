@@ -116,6 +116,15 @@ EOF
 " Mappings
 let mapleader = " "
 
+" Easy yanking to clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nmap <leader>Y "+Y
+
+" Easy deletion without saving to register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
 " Show Tree with Ctrl-b
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
