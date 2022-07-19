@@ -30,8 +30,11 @@ inoremap <Right> <Nop>
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -53,6 +56,11 @@ call plug#end()
 
 syntax enable
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+" colorscheme deep-space
+" colorscheme onehalfdark
+set background=dark
+set termguicolors
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
