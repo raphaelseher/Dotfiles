@@ -12,8 +12,7 @@
 #
 #   mode         = 'name of mode' | <mode> ',' <mode>
 #
-#   action       = <keysym> '[' <proc_map_lst> ']' | <keysym> '->' '[' <proc_map_lst> ']'
-#                  <keysym> ':' <command>          | <keysym> '->' ':' <command>
+#   action       = <keysym> '[' <proc_map_lst> ']' | <keysym> '->' '[' <proc_map_lst> ']' <keysym> ':' <command>          | <keysym> '->' ':' <command>
 #                  <keysym> ';' <mode>             | <keysym> '->' ';' <mode>
 #
 #   keysym       = <mod> '-' <key> | <key>
@@ -75,6 +74,8 @@
 # TO INTERACT WITH THE YABAI WM. THESE ARE SUPPOSED TO BE USED AS #
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
+
+cmd + shift - r : brew services restart yabai 
 
 # focus window
 ctrl - h : yabai -m window --focus west
