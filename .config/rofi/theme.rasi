@@ -1,17 +1,7 @@
-configuration {
-  display-run: " ";
-  display-drun: "  ";
-  display-window: "  ";
-  drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 12";
-  modi: "window,run,drun";
-  show-icons: true;
-}
-
 * {
   bg: #000000;
   bg-alt: #333333;
-  
+
   fg: #FFFFFF;
 
   primary: #458588;
@@ -19,7 +9,7 @@ configuration {
   secondary: #D90452;
 
   background-color: @bg;
-  
+
   border: 0;
   margin: 0;
   padding: 0;
@@ -66,4 +56,3 @@ prompt {
 window {
   transparency: "real";
 }
-
