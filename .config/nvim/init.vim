@@ -30,8 +30,11 @@ inoremap <Right> <Nop>
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -51,7 +54,12 @@ Plug 'puremourning/vimspector', {
 call plug#end()
 
 syntax enable
-colorscheme gruvbox
+" colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme deep-space
+" colorscheme onehalfdark
+set background=dark
+set termguicolors
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
@@ -106,6 +114,15 @@ EOF
 
 " Mappings
 let mapleader = " "
+
+" Easy yanking to clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nmap <leader>Y "+Y
+
+" Easy deletion without saving to register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
 
 " Show Tree with Ctrl-b
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>

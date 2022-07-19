@@ -1,3 +1,90 @@
+
 configuration {
-    theme: "theme";
+  display-run: " ";
+  display-drun: "  ";
+  display-window: "  ";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font Medium 12";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+* {
+  bg: #000000;
+  bg-alt: #333333;
+  fg: #FFFFFF;
+
+  primary: #458588;
+  primary-dark: #45858833;
+  secondary: #D90452;
+
+  background-color: @bg;
+
+  border: 0;
+  border-color: @bg;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+box {
+  padding: 12;
+  orientation: horizontal;
+  text-color: @fg;
+  background-color: @bg;
+}
+
+#element.normal.normal {
+  text-color: @fg;
+  background-color: @bg;
+}
+
+#element.alternate.normal {
+  text-color: @fg;
+  background-color: @bg;
+}
+
+element {
+  padding: 12;
+  orientation: horizontal;
+  text-color: @fg;
+  background-color: @bg;
+}
+
+element selected {
+  background-color: @primary-dark;
+}
+
+entry {
+  background-color: @primary;
+  padding: 12 0 12 3;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  background-color: @bg;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @primary;
+  enabled: true;
+  font: "FontAwesome 12";
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+  margin: 0;
+  padding: 0;
 }
