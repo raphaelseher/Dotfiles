@@ -54,7 +54,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -show drun -sidebar-mode"
-bindsym $mod+Tab exec --no-startup-id "rofi -modi window -show window" 
+bindsym $mod+Tab exec --no-startup-id "rofi -modi window -show window"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -184,7 +184,6 @@ bindsym $mod+r mode "resize"
 
 
 bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh &
-bindsym $mod+b exec --no-startup-id rofi-bluetooth
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -208,11 +207,11 @@ for_window[class="bkCashTerm"] floating enable
 
 # Styling
 # removes title of windows
-default_border pixel 1 
+default_border pixel 1
 
 # .Xresources color variables
 # set_from_resource $primary ui.primary #333333
-# set_from_resource $primary_dark ui.primary-darker #999999 
+# set_from_resource $primary_dark ui.primary-darker #999999
 # set_from_resource $background background #000000
 # set_from_resource $foreground foreground #FFFFFF
 
