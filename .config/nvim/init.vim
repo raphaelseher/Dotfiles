@@ -35,7 +35,6 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -54,22 +53,12 @@ Plug 'puremourning/vimspector', {
 call plug#end()
 
 syntax enable
-" colorscheme gruvbox
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme deep-space
-" colorscheme onehalfdark
 set background=dark
 set termguicolors
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-
-" NerdTree
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
 
 " C++
 let g:clang_format#auto_format=1
@@ -124,9 +113,6 @@ nmap <leader>Y "+Y
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
-" Show Tree with Ctrl-b
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
-
 " open new split panes to right and below
 set splitright
 set splitbelow
@@ -140,7 +126,9 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
-nnoremap <C-p> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'Ag -g ""'
+nnoremap <C-p> :Files<CR>
+nnoremap <C-[> :Ag<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -177,9 +165,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>+  :vertical resize +5<CR>
 nmap <leader>-  :vertical resize -5<CR>
-
-nmap <leader>h+  resize +5<CR>
-nmap <leader>h-  resize -5<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
