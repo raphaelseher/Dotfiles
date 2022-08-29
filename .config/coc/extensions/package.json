@@ -8,7 +8,7 @@
     "coc-eslint": ">=1.5.8",
     "coc-flutter": ">=1.9.8",
     "coc-html": ">=1.6.1",
-    "coc-jedi": ">=0.31.0",
+    "coc-jedi": ">=0.31.1",
     "coc-json": ">=1.4.2",
     "coc-phpls": ">=2.2.1",
     "coc-prettier": ">=9.3.1",
