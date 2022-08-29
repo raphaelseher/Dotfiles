@@ -1,15 +1,19 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "codeLens.enable": true,
-  "diagnostic.errorSign": "E",
-  "diagnostic.warningSign": "!",
-  "diagnostic.infoSign": ">",
-  "diagnostic.hintSign": ">",
-  "suggest.enablePreview": true,
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.semanticTokensHighlights": true,
-  "clangd.fallbackFlags": ["-std=c++11"],
-  "clangd.checkUpdates": true,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
-  "languageserver": {}
+    "coc.preferences.formatOnSaveFiletypes": [
+        "*"
+    ],
+    "codeLens.enable": true,
+    "diagnostic.errorSign": "E",
+    "diagnostic.warningSign": "!",
+    "diagnostic.infoSign": ">",
+    "diagnostic.hintSign": ">",
+    "suggest.enablePreview": true,
+    "coc.preferences.colorSupport": true,
+    "coc.preferences.semanticTokensHighlights": true,
+    "clangd.fallbackFlags": [
+        "-std=c++11"
+    ],
+    "clangd.checkUpdates": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+    "languageserver": {}
 }
