@@ -50,8 +50,7 @@ set termguicolors
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " C++
-let g:clang_format#auto_format=1
-let g:clang_format#code_style = 'google'
+let g:style_option = 'google'
 
 let g:ale_disable_lsp = 1
 let g:ale_linters = {
@@ -64,7 +63,8 @@ let g:ale_linters = {
 let g:ale_fix_on_save = 1
 let b:ale_fixers = {
             \'*': ['remove_trailing_lines', 'trim_whitespace'],
-            \'javascript': ['prettier', 'eslint']
+            \'javascript': ['prettier', 'eslint'],
+            \'cpp': ['clang-format']
             \}
 
 let g:ale_sign_column_always = 1
