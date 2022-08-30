@@ -18,17 +18,6 @@ set termguicolors
 set colorcolumn=100
 set signcolumn=yes
 
-" Remove arrowkeys for learning
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'tyrannicaltoucan/vim-deep-space'
@@ -142,7 +131,8 @@ inoremap <silent><expr> <TAB>
     \ coc#pum#visible() ? coc#pum#next(1):
     \ <SID>check_back_space() ? "\<Tab>" :
     \ coc#refresh()
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
