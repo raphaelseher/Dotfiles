@@ -7,6 +7,7 @@ set nu
 set relativenumber
 set nohlsearch
 set hidden
+set ignorecase
 set noerrorbells
 set nowrap
 set noswapfile
@@ -34,6 +35,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 " C++
 Plug 'dense-analysis/ale'
 Plug 'rhysd/vim-clang-format', {'for' : ['c', 'cpp']}
+
 Plug 'puremourning/vimspector', {
   \ 'do': 'python3 install_gadget.py --enable-vscode-cpptools'
   \ }
@@ -116,8 +118,8 @@ endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-nnoremap <C-p> :Files<CR>
-nnoremap <C-[> :Ag<CR>
+nnoremap <c-p> :Files<CR>
+nnoremap <c-q> :Ag<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',

@@ -1,4 +1,8 @@
+# config = git in homefolder for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# the one alias to rule them all
+alias vim="nvim"
 
 # custom commands
 alias ll="ls -l"

@@ -204,6 +204,7 @@ exec_always --no-startup-id nextcloud --background &
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
 for_window[class="bkCashTerm"] floating enable
+for_window[class="bkautomat"] floating enable
 
 # Styling
 # removes title of windows
