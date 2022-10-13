@@ -36,6 +36,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'dense-analysis/ale'
 Plug 'rhysd/vim-clang-format', {'for' : ['c', 'cpp']}
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 Plug 'puremourning/vimspector', {
   \ 'do': 'python3 install_gadget.py --enable-vscode-cpptools'
   \ }
@@ -45,6 +48,7 @@ call plug#end()
 
 syntax enable
 colorscheme gruvbox
+"colorscheme deep-space
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 set termguicolors
@@ -53,6 +57,11 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " C++
 let g:style_option = 'google'
+
+" Rust
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
 
 let g:ale_disable_lsp = 1
 let g:ale_linters = {
