@@ -23,7 +23,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -47,11 +46,10 @@ Plug 'puremourning/vimspector', {
 call plug#end()
 
 syntax enable
-colorscheme gruvbox
-"colorscheme deep-space
+"colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
-set termguicolors
+colorscheme deep-space
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
@@ -65,7 +63,7 @@ let g:rustfmt_fail_silently = 0
 
 let g:ale_disable_lsp = 1
 let g:ale_linters = {
-    \ 'python': ['pylint'],
+    \ 'python': ['pyright'],
     \ 'php': ['phpcbf', 'php_cs_fixer'],
     \ 'vim': ['vint'],
     \ 'cpp': [ 'cpplint', 'cppcheck', 'clangtidy', 'clazy'],
@@ -122,7 +120,6 @@ tnoremap <Esc> <C-\><C-n>
 " open terminal on ctrl+n
 function! OpenTerminal()
   split term://zsh
-  resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
