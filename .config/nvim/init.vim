@@ -23,6 +23,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -46,10 +48,11 @@ Plug 'puremourning/vimspector', {
 call plug#end()
 
 syntax enable
-"colorscheme gruvbox
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
-colorscheme deep-space
+"colorscheme tokyonight-moon
+"colorscheme deep-space
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
