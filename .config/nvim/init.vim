@@ -26,8 +26,8 @@ Plug 'morhetz/gruvbox'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-clangd', 'coc-phpls', 'coc-pyright' ]
@@ -48,11 +48,9 @@ Plug 'puremourning/vimspector', {
 call plug#end()
 
 syntax enable
-colorscheme gruvbox
+"colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
-set background=dark
-"colorscheme tokyonight-moon
-"colorscheme deep-space
+colorscheme tokyonight-night
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
@@ -126,14 +124,8 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-nnoremap <c-p> :Files<CR>
-nnoremap <c-q> :Ag<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+nnoremap <c-p> :Telescope find_files<CR>
+nnoremap <c-q> :Telescope live_grep<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
