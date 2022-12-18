@@ -21,10 +21,9 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'morhetz/gruvbox'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'joshdick/onedark.vim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -49,8 +48,10 @@ call plug#end()
 
 syntax enable
 "colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+"let g:gruvbox_contrast_dark = 'hard'
+"set background=dark
 colorscheme tokyonight-night
+"colorscheme onedark
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
@@ -90,6 +91,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {
       "tsx", "json", "html", "cpp", "typescript", "css", "scss", "php"
       }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = {}, -- List of parsers to ignore installing
   highlight = {
