@@ -6,4 +6,16 @@ alias vim="nvim"
 
 # custom commands
 alias ll="ls -l"
-alias la="ls -l"
+alias la="ls -al"
+
+# python dev
+alias enva="source env/bin/activate"
+alias envd="deactivate"
+
+# docker
+alias dimg="docker images"
+alias dps="docker ps"
+alias dcbuild="docker-compose build"
+alias dcup="docker-compose up"
+alias dcdown="docker-compose down"
+alias dcrestart="docker-compose restart"

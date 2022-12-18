@@ -193,7 +193,7 @@ bar {
 }
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/astronaut.jpg
+exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/window.webp
 
 # Keyboard - Remap CapsLock to ESC
 exec_always --no-startup-id sh -c 'sleep 30 && xmodmap ~/.Xmodmap' #disable caps lock switch
