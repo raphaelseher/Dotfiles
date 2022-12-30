@@ -16,5 +16,7 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
+
+  use 'rhysd/vim-clang-format'
 end)
 
