@@ -27,3 +27,7 @@ for key, value in pairs(options) do
   vim.o[key] = value
 end
 
+
+vim.o.splitright = true
+vim.o.splitbelow = true
+
