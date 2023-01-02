@@ -6,3 +6,4 @@ require('theme')
 require('mappings')
 
 require('lsp')
+require('fmt')

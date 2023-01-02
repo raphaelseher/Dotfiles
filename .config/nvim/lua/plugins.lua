@@ -17,6 +17,6 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
 
-  use 'rhysd/vim-clang-format'
+  use 'dense-analysis/ale'
 end)
 
