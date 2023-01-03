@@ -2,6 +2,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use "morhetz/gruvbox"
+  use "dracula/vim"
+  use "sickill/vim-monokai"
   use "folke/tokyonight.nvim"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use "nvim-lua/plenary.nvim"
@@ -19,4 +21,3 @@ return require('packer').startup(function(use)
 
   use 'dense-analysis/ale'
 end)
-

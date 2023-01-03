@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
 
-vim.api.nvim_set_keymap("n", "<leader>y", "+y", {})
-vim.api.nvim_set_keymap("v", "<leader>y", "+y", {})
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
 
-vim.api.nvim_set_keymap("n", "<leader>d", "_d", { noremap = true })
-vim.api.nvim_set_keymap("v", "<leader>d", "_d", { noremap = true })
+vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
