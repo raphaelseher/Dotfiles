@@ -16,6 +16,7 @@ local function configure_ale()
   -- Set the fixers to use for various file types
   vim.g.ale_fixers = {
     ['*'] = {'remove_trailing_lines', 'trim_whitespace'},
+    python = {'black'},
     javascript = {'prettier', 'eslint'},
     cpp = {'clang-format'},
   }
@@ -32,4 +33,3 @@ local function configure_ale()
 end
 
 configure_ale()
-

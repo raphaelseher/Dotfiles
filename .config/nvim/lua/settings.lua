@@ -1,3 +1,4 @@
+
 local options = {
   tabstop = 4,
   softtabstop = 4,
@@ -14,7 +15,7 @@ local options = {
   nowrap = true,
   noswapfile = true,
   nobackup = true,
-  undodir = "~/.vim/undodir",
+  undodir = vim.fn.stdpath('config') .. '/undodir',
   undofile = true,
   incsearch = true,
   termguicolors = true,
@@ -30,4 +31,3 @@ end
 
 vim.o.splitright = true
 vim.o.splitbelow = true
-
