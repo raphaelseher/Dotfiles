@@ -1,5 +1,6 @@
 vim.cmd("syntax enable")
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme sonokai")
+--vim.cmd("colorscheme dracula")
 --vim.cmd("colorscheme monokai")
 --vim.cmd("colorscheme gruvbox")
 --vim.cmd("let g:gruvbox_contrast_dark = 'hard'")

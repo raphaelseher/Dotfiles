@@ -1,6 +1,6 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-great-icons",
     "vim.useSystemClipboard": true,
     "keyboard.dispatch": "keyCode",

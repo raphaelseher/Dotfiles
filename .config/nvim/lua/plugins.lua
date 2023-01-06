@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
   use "morhetz/gruvbox"
   use "dracula/vim"
   use "sickill/vim-monokai"
+  use "sainnhe/sonokai"
   use "folke/tokyonight.nvim"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use "nvim-lua/plenary.nvim"
