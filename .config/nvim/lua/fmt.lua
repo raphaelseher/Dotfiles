@@ -8,6 +8,7 @@ local function configure_ale()
     php = {'phpcbf', 'php_cs_fixer'},
     vim = {'vint'},
     cpp = {'cpplint', 'cppcheck', 'clangtidy', 'clazy'},
+    html = {'vscodehtml'}
   }
 
   -- Enable automatic fixing on save
@@ -19,6 +20,7 @@ local function configure_ale()
     python = {'black'},
     javascript = {'prettier', 'eslint'},
     cpp = {'clang-format'},
+    html = {'prettier'}
   }
 
   -- Enable signs in the sign column
