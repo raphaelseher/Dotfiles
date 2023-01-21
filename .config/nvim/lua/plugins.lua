@@ -1,11 +1,14 @@
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
   use "morhetz/gruvbox"
   use "dracula/vim"
-  use "sickill/vim-monokai"
   use "sainnhe/sonokai"
   use "folke/tokyonight.nvim"
+  use 'navarasu/onedark.nvim'
+  use { 'catppuccin/vim', as = 'catppuccin' }
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use "nvim-lua/plenary.nvim"
   use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
@@ -17,8 +20,12 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'voldikss/vim-floaterm'
+
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
 
   use 'dense-analysis/ale'
+
+  --use 'rust-lang/rust.vim'
+
 end)
