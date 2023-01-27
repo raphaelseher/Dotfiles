@@ -1,9 +1,11 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "Monokai Classic Icons",
     "vim.useSystemClipboard": true,
     "keyboard.dispatch": "keyCode",
     "window.zoomLevel": 1,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Atom One Dark",
+    "vim.enableNeovim": true,
+    "vim.leader": " "
 }

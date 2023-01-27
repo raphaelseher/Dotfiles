@@ -6,7 +6,8 @@ return require('packer').startup(function(use)
   use "dracula/vim"
   use "sainnhe/sonokai"
   use "folke/tokyonight.nvim"
-  use 'navarasu/onedark.nvim'
+  --use 'navarasu/onedark.nvim'
+  use "olimorris/onedarkpro.nvim"
   use { 'catppuccin/vim', as = 'catppuccin' }
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -21,11 +22,16 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'voldikss/vim-floaterm'
 
-  use 'mfussenegger/nvim-dap'
-  use 'rcarriga/nvim-dap-ui'
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   use 'dense-analysis/ale'
 
-  --use 'rust-lang/rust.vim'
+  use 'rust-lang/rust.vim'
+
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
 
 end)

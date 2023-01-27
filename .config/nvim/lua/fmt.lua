@@ -8,7 +8,7 @@ local function configure_ale()
     php = {'phpcbf', 'php_cs_fixer'},
     vim = {'vint'},
     cpp = {'cpplint', 'cppcheck', 'clangtidy', 'clazy'},
-    html = {'vscodehtml'}
+    html = {'prettier', 'vscodehtml'}
   }
 
   -- Enable automatic fixing on save
