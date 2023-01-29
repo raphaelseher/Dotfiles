@@ -112,3 +112,4 @@ if [ -f '/home/raphael/dev/_libraries/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/raphael/dev/_libraries/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/raphael/dev/_libraries/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
