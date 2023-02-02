@@ -42,7 +42,6 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				print("FUUUClk")
 				vim.lsp.buf.format({ bufnr = bufnr })
 			end,
 		})
