@@ -14,3 +14,9 @@ vim.api.nvim_set_keymap("n", "<c-q>", ":Telescope live_grep<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>+", ":vertical resize +5<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>-", ":vertical resize -5<CR>", {})
+
+require('telescope').setup{
+    defaults = {
+        file_ignore_patterns = { "node_modules" }
+    }
+}
