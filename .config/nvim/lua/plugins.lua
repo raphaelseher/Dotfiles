@@ -27,6 +27,12 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'voldikss/vim-floaterm'
+  use {
+  "klen/nvim-test",
+  config = function()
+    require('nvim-test').setup()
+  end
+}
 
 
   use {
