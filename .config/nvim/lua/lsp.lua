@@ -42,7 +42,12 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				vim.lsp.buf.format({ bufnr = bufnr })
+				vim.lsp.buf.format({
+					bufnr = bufnr,
+					filter = function(fmtclient)
+						return fmtclient.name == "null-ls"
+					end,
+				})
 			end,
 		})
 	end
@@ -59,7 +64,7 @@ vim.api.nvim_command(
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"sumneko_lua",
+		"lua_ls",
 		"dockerls",
 		"html",
 		"intelephense",
@@ -119,7 +124,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.rubocop,
-		null_ls.builtins.formatting.markdownlint,
 
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.diagnostics.clazy,
