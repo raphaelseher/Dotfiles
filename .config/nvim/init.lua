@@ -1,11 +1,11 @@
-require('settings')
+require("settings")
 
-require('plugins')
+require("plugins")
 
+require("uiconfiguration")
 
-require('mappings')
+require("mappings")
 
-require('lsp')
-require('dap')
+require("lsp")
 
-require('theme')
+require("theme")

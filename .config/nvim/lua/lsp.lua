@@ -62,6 +62,11 @@ vim.api.nvim_command(
 )
 
 require("mason").setup()
+require("mason-nvim-dap").setup({
+	automatic_setup = true,
+	ensure_installed = { "python", "codelldb", "node2" },
+})
+require("mason-nvim-dap").setup_handlers({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
@@ -103,8 +108,8 @@ cmp.setup({
 	},
 	mapping = {
 		["<cr>"] = cmp.mapping.confirm({ select = true }),
-		["<s-tab>"] = cmp.mapping.select_prev_item(),
-		["<tab>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<C-j>"] = cmp.mapping.select_next_item(),
 	},
 	snippet = {
 		expand = function(args)
