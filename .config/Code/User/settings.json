@@ -5,7 +5,16 @@
     "keyboard.dispatch": "keyCode",
     "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Dracula",
     "vim.enableNeovim": true,
-    "vim.leader": " "
+    "vim.leader": " ",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "git.autofetch": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true
 }

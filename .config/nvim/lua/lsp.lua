@@ -42,7 +42,12 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				vim.lsp.buf.format({ bufnr = bufnr })
+				vim.lsp.buf.format({
+					bufnr = bufnr,
+					filter = function(fmtclient)
+						return fmtclient.name == "null-ls"
+					end,
+				})
 			end,
 		})
 	end
@@ -57,9 +62,14 @@ vim.api.nvim_command(
 )
 
 require("mason").setup()
+require("mason-nvim-dap").setup({
+	automatic_setup = true,
+	ensure_installed = { "python", "codelldb", "node2" },
+})
+require("mason-nvim-dap").setup_handlers({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"sumneko_lua",
+		"lua_ls",
 		"dockerls",
 		"html",
 		"intelephense",
@@ -98,8 +108,8 @@ cmp.setup({
 	},
 	mapping = {
 		["<cr>"] = cmp.mapping.confirm({ select = true }),
-		["<s-tab>"] = cmp.mapping.select_prev_item(),
-		["<tab>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<C-j>"] = cmp.mapping.select_next_item(),
 	},
 	snippet = {
 		expand = function(args)
@@ -119,7 +129,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.rubocop,
-		null_ls.builtins.formatting.markdownlint,
 
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.diagnostics.clazy,
