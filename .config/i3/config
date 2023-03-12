@@ -211,11 +211,11 @@ for_window[class="bkautomat"] floating enable
 default_border pixel 1
 
 # .Xresources color variables
-# set_from_resource $primary ui.primary #333333
-# set_from_resource $primary_dark ui.primary-darker #999999
-# set_from_resource $background background #000000
-# set_from_resource $foreground foreground #FFFFFF
+set_from_resource $primary ui.primary #CB0C59
+set_from_resource $primary_dark ui.primary-darker #7B1346
+set_from_resource $background background #000000
+set_from_resource $foreground foreground #FFFFFF
 
 # Styling               border  backgr. text    indicator child_border
-# client.focused          $primary $primary $background $primary_dark $primary
-# client.background       $background
+client.focused          $primary $primary $background $primary_dark $primary
+client.background       $background
