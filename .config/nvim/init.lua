@@ -9,3 +9,5 @@ require("mappings")
 require("lsp")
 
 require("theme")
+
+require("local_rc").load()
