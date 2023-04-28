@@ -1,23 +1,30 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.iconTheme": "Monokai Classic Icons",
-    "vim.useSystemClipboard": true,
-    "keyboard.dispatch": "keyCode",
-    "window.zoomLevel": 1,
-    "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Dracula",
-    "vim.enableNeovim": true,
-    "vim.leader": " ",
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "editor.inlineSuggest.enabled": true,
-    "git.autofetch": true,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.formatOnSave": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "Monokai Classic Icons",
+  "vim.useSystemClipboard": true,
+  "keyboard.dispatch": "keyCode",
+  "window.zoomLevel": 1,
+  "editor.lineNumbers": "relative",
+  "vim.enableNeovim": true,
+  "vim.leader": " ",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "git.autofetch": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Dracula",
+  "go.toolsManagement.autoUpdate": true,
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
