@@ -30,8 +30,6 @@ return require("packer").startup(function(use)
 	use("voldikss/vim-floaterm")
 	use("klen/nvim-test")
 
-	use("github/copilot.vim")
-
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
