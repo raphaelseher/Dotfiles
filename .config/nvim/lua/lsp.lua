@@ -9,8 +9,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-	-- Enable completion triggered by <c-x><c-o>
-	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+	-- Enable completion triggered by <c-x><c-o> vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -66,7 +65,7 @@ require("mason-nvim-dap").setup({
 	automatic_setup = true,
 	ensure_installed = { "python", "codelldb", "node2" },
 })
-require("mason-nvim-dap").setup_handlers({})
+-- require("mason-nvim-dap").setup_handlers({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
@@ -75,9 +74,9 @@ require("mason-lspconfig").setup({
 		"intelephense",
 		"jsonls",
 		"pyright",
-		"ruby_ls",
 		"tsserver",
 		"clangd",
+		"gopls",
 	},
 })
 
@@ -128,13 +127,20 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
-		null_ls.builtins.formatting.rubocop,
+		null_ls.builtins.formatting.gofmt,
+		null_ls.builtins.formatting.pint,
 
 		null_ls.builtins.diagnostics.eslint,
-		null_ls.builtins.diagnostics.clazy,
 		null_ls.builtins.diagnostics.cpplint,
+		null_ls.builtins.diagnostics.cppcheck,
+		null_ls.builtins.diagnostics.clazy,
 		null_ls.builtins.diagnostics.pylint,
-		null_ls.builtins.diagnostics.rubocop,
+		--null_ls.builtins.diagnostics.phpcs,
+		null_ls.builtins.diagnostics.phpmd.with({
+			extra_args = function()
+				return { "cleancode,codesize,controversial,design,naming,unusedcode" }
+			end,
+		}),
 		null_ls.builtins.diagnostics.markdownlint,
 
 		null_ls.builtins.completion.spell,
