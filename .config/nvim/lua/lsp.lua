@@ -128,14 +128,23 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.gofmt,
-		null_ls.builtins.formatting.pint,
+		null_ls.builtins.formatting.phpcsfixer,
+		null_ls.builtins.formatting.phpcbf.with({
+			extra_args = function()
+				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
+			end,
+		}),
 
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.diagnostics.cpplint,
 		null_ls.builtins.diagnostics.cppcheck,
 		null_ls.builtins.diagnostics.clazy,
 		null_ls.builtins.diagnostics.pylint,
-		--null_ls.builtins.diagnostics.phpcs,
+		null_ls.builtins.diagnostics.phpcs.with({
+			extra_args = function()
+				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
+			end,
+		}),
 		null_ls.builtins.diagnostics.phpmd.with({
 			extra_args = function()
 				return { "cleancode,codesize,controversial,design,naming,unusedcode" }
