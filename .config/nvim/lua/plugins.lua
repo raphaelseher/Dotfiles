@@ -27,6 +27,7 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("voldikss/vim-floaterm")
 	use("klen/nvim-test")
+	use("folke/trouble.nvim")
 
 	use({
 		"nvim-lualine/lualine.nvim",

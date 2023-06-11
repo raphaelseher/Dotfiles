@@ -19,12 +19,12 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Dracula",
   "go.toolsManagement.autoUpdate": true,
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "workbench.colorTheme": "onedark.nvim"
 }
