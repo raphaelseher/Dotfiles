@@ -138,6 +138,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.diagnostics.cpplint,
 		null_ls.builtins.diagnostics.cppcheck,
+		null_ls.builtins.diagnostics.golangci_lint,
+		null_ls.builtins.diagnostics.staticcheck,
 		null_ls.builtins.diagnostics.clazy,
 		null_ls.builtins.diagnostics.pylint,
 		null_ls.builtins.diagnostics.phpcs.with({

@@ -10,4 +10,6 @@ require("lsp")
 
 require("theme")
 
+require("debugger")
+
 require("local_rc").load()

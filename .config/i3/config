@@ -211,8 +211,8 @@ for_window[class="bkautomat"] floating enable
 default_border pixel 1
 
 # .Xresources color variables
-set_from_resource $primary ui.primary #CB0C59
-set_from_resource $primary_dark ui.primary-darker #7B1346
+set_from_resource $primary ui.primary #34BFD0
+set_from_resource $primary_dark ui.primary-darker #00919E
 set_from_resource $background background #000000
 set_from_resource $foreground foreground #FFFFFF
 

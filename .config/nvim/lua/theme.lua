@@ -5,7 +5,7 @@ vim.cmd("set background=dark")
 --vim.cmd("colorscheme monokai")
 --vim.cmd("colorscheme gruvbox")
 --vim.cmd("let g:gruvbox_contrast_dark = 'hard'")
---vim.cmd("colorscheme tokyonight")
+--vim.cmd("colorscheme tokyonight-night")
 --vim.cmd("colorscheme onedark")
 
 require("lualine").setup()

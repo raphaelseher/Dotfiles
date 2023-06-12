@@ -2,12 +2,13 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("tpope/vim-surround")
+	use("stevearc/dressing.nvim")
+
 	use("morhetz/gruvbox")
 	use("dracula/vim")
-	use("sainnhe/sonokai")
 	use("folke/tokyonight.nvim")
 	use("navarasu/onedark.nvim")
-	use({ "catppuccin/vim", as = "catppuccin" })
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-lua/plenary.nvim")
@@ -29,6 +30,7 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("voldikss/vim-floaterm")
 	use("klen/nvim-test")
+	use("folke/trouble.nvim")
 
 	use({
 		"nvim-lualine/lualine.nvim",
