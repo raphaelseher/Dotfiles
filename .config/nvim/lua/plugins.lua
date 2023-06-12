@@ -2,6 +2,9 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("tpope/vim-surround")
+	use("stevearc/dressing.nvim")
+
 	use("morhetz/gruvbox")
 	use("dracula/vim")
 	use("folke/tokyonight.nvim")
