@@ -9,3 +9,12 @@ require("nvim-test").setup({
 		direction = "float",
 	},
 })
+
+require("telescope").setup({
+	defaults = {
+		file_ignore_patterns = {
+			"node_modules",
+			"vendor",
+		},
+	},
+})
