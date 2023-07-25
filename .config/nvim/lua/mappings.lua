@@ -29,3 +29,5 @@ vim.api.nvim_set_keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()
 vim.api.nvim_set_keymap("n", "<leader>do", ":lua require'dap'.step_over()<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>di", ":lua require'dap'.step_into()<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", {})
+
+vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>TroubleToggle<cr>", {})

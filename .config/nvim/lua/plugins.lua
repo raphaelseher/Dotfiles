@@ -6,7 +6,8 @@ return require("packer").startup(function(use)
 	use("stevearc/dressing.nvim")
 
 	use("morhetz/gruvbox")
-	use("dracula/vim")
+	-- use("dracula/vim")
+    use("Mofiqul/dracula.nvim")
 	use("folke/tokyonight.nvim")
 	use("navarasu/onedark.nvim")
 
@@ -30,12 +31,13 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("voldikss/vim-floaterm")
 	use("klen/nvim-test")
-	use("folke/trouble.nvim")
-
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+	use({
+        "folke/trouble.nvim",
+    })
 
 	use({
 		"akinsho/toggleterm.nvim",

@@ -1,6 +1,6 @@
 vim.cmd("syntax enable")
 --vim.cmd("colorscheme sonokai")
---vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme dracula")
 vim.cmd("set background=dark")
 --vim.cmd("colorscheme monokai")
 --vim.cmd("colorscheme gruvbox")
@@ -10,7 +10,7 @@ vim.cmd("set background=dark")
 
 require("lualine").setup()
 
-require("onedark").setup({
-	style = "deep",
-})
-require("onedark").load()
+-- require("onedark").setup({
+-- 	style = "deep",
+-- })
+-- require("onedark").load()
