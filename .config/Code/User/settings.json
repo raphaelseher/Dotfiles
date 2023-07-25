@@ -1,30 +1,115 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
-  "workbench.iconTheme": "Monokai Classic Icons",
-  "vim.useSystemClipboard": true,
   "keyboard.dispatch": "keyCode",
   "window.zoomLevel": 1,
-  "editor.lineNumbers": "relative",
-  "vim.enableNeovim": true,
-  "vim.leader": " ",
   "[python]": {
     "editor.formatOnType": true
   },
   "editor.inlineSuggest.enabled": true,
   "git.autofetch": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.formatOnSave": true,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "go.toolsManagement.autoUpdate": true,
-  "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
-  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "workbench.colorTheme": "onedark.nvim"
+  "php.suggest.basic": false,
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer",
+    "editor.formatOnSave": true
+  },
+  "editor.quickSuggestions": {
+    "comments": true
+  },
+  "workbench.colorTheme": "Dracula",
+  "editor.lineNumbers": "relative",
+  "vim.enableNeovim": true,
+  "vim.leader": " ",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "f"
+      ],
+      "commands": [
+        "fileutils.renameFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "g"
+      ],
+      "commands": [
+        "workbench.view.search"
+      ]
+    },
+  ],
+  "editor.fontSize": 11,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.visible": false,
+  "breadcrumbs.enabled": false,
+  "editor.renderControlCharacters": false,
 }
