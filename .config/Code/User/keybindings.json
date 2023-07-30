@@ -1,86 +1,102 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "cmd+r",
-    "when": "",
-    "command": "workbench.view.debug"
+    "key": "ctrl+r",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  }
+  // Editor Views Mac
+  {
+    "key": "cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "cmd+f",
-    "when": "",
-    "command": "workbench.view.search"
-  },
-  {
-    "key": "cmd+e",
-    "when": "",
+    "key": "cmd+k cmd+e",
     "command": "workbench.view.explorer"
   },
   {
-    "key": "ctrl+h",
-    "when": "!suggestWidgetVisible",
-    "command": "workbench.action.navigateLeft"
+    "key": "cmd+k cmd+g",
+    "command": "workbench.view.scm"
   },
   {
-    "key": "ctrl+l",
-    "when": "!suggestWidgetVisible",
-    "command": "workbench.action.navigateRight"
+    "key": "cmd+k cmd+d",
+    "command": "workbench.view.debug"
   },
   {
-    "key": "ctrl+k",
-    "when": "!suggestWidgetVisible",
-    "command": "workbench.action.navigateUp"
+    "key": "cmd+k cmd+x",
+    "command": "workbench.view.extensions"
   },
   {
-    "key": "ctrl+j",
-    "when": "!suggestWidgetVisible",
-    "command": "workbench.action.navigateDown"
+    "key": "cmd+k cmd+t",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  }
+  // Editor Views Linux
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+k",
-    "command": "-extension.vim_ctrl+k",
-    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+    "key": "ctrl+k ctrl+e",
+    "command": "workbench.view.explorer"
   },
   {
-    "key": "ctrl+k",
-    "command": "-deleteAllRight",
-    "when": "textInputFocus && !editorReadonly"
+    "key": "ctrl+k ctrl+g",
+    "command": "workbench.view.scm"
   },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  }
+  // VIM Binds for suggest and quickOpen
   {
     "key": "ctrl+j",
     "command": "workbench.action.quickOpenSelectNext",
-    "when": "!editorFocus"
+    "when": "inQuickOpen"
   },
   {
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "!editorFocus"
+    "when": "inQuickOpen"
   },
   {
-    "key": "shift+cmd+f",
-    "command": "actions.find",
-    "when": "editorFocus || editorIsOpen"
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
   },
   {
-    "key": "cmd+f",
-    "command": "-actions.find",
-    "when": "editorFocus || editorIsOpen"
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  // VIM Keybinds to focus windows
+  {
+    "key": "ctrl+shift+h",
+    "when": "!suggestWidgetVisible && !inQuickOpen",
+    "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "shift+cmd+d",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
+    "key": "ctrl+shift+j",
+    "when": "!suggestWidgetVisible && !inQuickOpen",
+    "command": "workbench.action.navigateDown"
   },
   {
-    "key": "cmd+d",
-    "command": "-editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
+    "key": "ctrl+shift+k",
+    "when": "!suggestWidgetVisible && !inQuickOpen",
+    "command": "workbench.action.navigateUp"
   },
   {
-    "key": "cmd+;",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "shift+cmd+h",
-    "command": "-workbench.action.replaceInFiles"
+    "key": "ctrl+shift+l",
+    "when": "!suggestWidgetVisible && !inQuickOpen",
+    "command": "workbench.action.navigateRight"
   },
 ]

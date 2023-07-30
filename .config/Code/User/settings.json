@@ -1,27 +1,21 @@
 {
-  "security.workspace.trust.untrustedFiles": "open",
-  "keyboard.dispatch": "keyCode",
-  "window.zoomLevel": 1,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "editor.inlineSuggest.enabled": true,
-  "git.autofetch": true,
+  "editor.lineNumbers": "relative",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
   "editor.formatOnSave": true,
-  "go.toolsManagement.autoUpdate": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "php.suggest.basic": false,
-  "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer",
-    "editor.formatOnSave": true
-  },
+  "editor.inlineSuggest.enabled": true,
   "editor.quickSuggestions": {
     "comments": true
   },
+  "breadcrumbs.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "keyboard.dispatch": "keyCode",
+  "window.zoomLevel": 1,
+  "go.toolsManagement.autoUpdate": true,
+  "git.autofetch": true,
   "workbench.colorTheme": "Dracula",
-  "editor.lineNumbers": "relative",
   "vim.enableNeovim": true,
   "vim.leader": " ",
   "vim.useSystemClipboard": true,
@@ -29,24 +23,6 @@
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "commands": [
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "t"
-      ],
-      "commands": [
-        "workbench.action.togglePanel"
-      ]
-    },
     {
       "before": [
         "<leader>",
@@ -64,52 +40,24 @@
       "commands": [
         "editor.action.showHover"
       ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "r",
-        "f"
-      ],
-      "commands": [
-        "fileutils.renameFile"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "f",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "f",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "f",
-        "g"
-      ],
-      "commands": [
-        "workbench.view.search"
-      ]
-    },
+    }
   ],
-  "editor.fontSize": 11,
-  "editor.tabSize": 2,
-  "editor.minimap.enabled": false,
-  "workbench.activityBar.visible": false,
-  "breadcrumbs.enabled": false,
-  "editor.renderControlCharacters": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "php.suggest.basic": false,
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer",
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "extensions.ignoreRecommendations": true,
+  "cpplint.cpplintPath": "/usr/bin/cpplint",
 }
