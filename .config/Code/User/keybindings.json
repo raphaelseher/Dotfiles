@@ -4,33 +4,7 @@
     "key": "ctrl+r",
     "command": "workbench.action.debug.start",
     "when": "debuggersAvailable && debugState == 'inactive'"
-  }
-  // Editor Views Mac
-  {
-    "key": "cmd+b",
-    "command": "workbench.action.toggleSidebarVisibility"
   },
-  {
-    "key": "cmd+k cmd+e",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "cmd+k cmd+g",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "cmd+k cmd+d",
-    "command": "workbench.view.debug"
-  },
-  {
-    "key": "cmd+k cmd+x",
-    "command": "workbench.view.extensions"
-  },
-  {
-    "key": "cmd+k cmd+t",
-    "command": "workbench.actions.view.problems",
-    "when": "workbench.panel.markers.view.active"
-  }
   // Editor Views Linux
   {
     "key": "ctrl+b",
@@ -56,7 +30,7 @@
     "key": "ctrl+k ctrl+t",
     "command": "workbench.actions.view.problems",
     "when": "workbench.panel.markers.view.active"
-  }
+  },
   // VIM Binds for suggest and quickOpen
   {
     "key": "ctrl+j",

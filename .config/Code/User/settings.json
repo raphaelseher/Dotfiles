@@ -60,4 +60,5 @@
   },
   "extensions.ignoreRecommendations": true,
   "cpplint.cpplintPath": "/usr/bin/cpplint",
+  "workbench.activityBar.visible": false,
 }
