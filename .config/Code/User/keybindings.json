@@ -1,10 +1,5 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "ctrl+r",
-    "command": "workbench.action.debug.start",
-    "when": "debuggersAvailable && debugState == 'inactive'"
-  }
   // Editor Views Mac
   {
     "key": "cmd+b",
@@ -30,7 +25,7 @@
     "key": "cmd+k cmd+t",
     "command": "workbench.actions.view.problems",
     "when": "workbench.panel.markers.view.active"
-  }
+  },
   // Editor Views Linux
   {
     "key": "ctrl+b",
@@ -99,4 +94,9 @@
     "when": "!suggestWidgetVisible && !inQuickOpen",
     "command": "workbench.action.navigateRight"
   },
+  {
+    "key": "ctrl+h",
+    "command": "C_Cpp.SwitchHeaderSource",
+    "when": "editorLangId == 'cpp'"
+  }
 ]

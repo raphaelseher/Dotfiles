@@ -16,32 +16,10 @@
   "go.toolsManagement.autoUpdate": true,
   "git.autofetch": true,
   "workbench.colorTheme": "Dracula",
-  "vim.enableNeovim": true,
-  "vim.leader": " ",
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.incsearch": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "r",
-        "n"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    }
-  ],
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -59,5 +37,6 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "extensions.ignoreRecommendations": true,
-  "cpplint.cpplintPath": "/usr/bin/cpplint",
+  "workbench.activityBar.visible": false,
+  "debug.onTaskErrors": "showErrors",
 }
