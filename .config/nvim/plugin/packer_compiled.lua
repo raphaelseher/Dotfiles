@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/vim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -103,6 +98,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
   },
   gruvbox = {
     loaded = true,
@@ -144,10 +149,20 @@ _G.packer_plugins = {
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
+  },
   ["nvim-dap-ui"] = {
     loaded = true,
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-vscode-js"] = {
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
+    url = "https://github.com/mxsdev/nvim-dap-vscode-js"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -165,9 +180,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/raphael/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
@@ -185,11 +199,6 @@ _G.packer_plugins = {
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  sonokai = {
-    loaded = true,
-    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -201,20 +210,26 @@ _G.packer_plugins = {
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["tokyonight.nvim"] = {
+  ["trouble.nvim"] = {
     loaded = true,
-    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
-  vim = {
-    loaded = true,
-    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/raphael/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vscode-js-debug"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/raphael/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
+    url = "https://github.com/microsoft/vscode-js-debug"
   }
 }
 

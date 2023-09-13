@@ -7,8 +7,7 @@ return require("packer").startup(function(use)
 
 	use("morhetz/gruvbox")
 	-- use("dracula/vim")
-    use("Mofiqul/dracula.nvim")
-	use("folke/tokyonight.nvim")
+	use("maxmx03/dracula.nvim")
 	use("navarasu/onedark.nvim")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -36,8 +35,8 @@ return require("packer").startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 	use({
-        "folke/trouble.nvim",
-    })
+		"folke/trouble.nvim",
+	})
 
 	use({
 		"akinsho/toggleterm.nvim",
