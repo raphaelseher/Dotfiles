@@ -37,6 +37,7 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "extensions.ignoreRecommendations": true,
-  "workbench.activityBar.visible": false,
   "debug.onTaskErrors": "showErrors",
+  "workbench.activityBar.visible": false,
+  "git.confirmSync": false,
 }
