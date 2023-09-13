@@ -52,6 +52,21 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 	}
 end
 
+require("dap").adapters.php = {
+  type = 'executable',
+  command = 'node',
+  args = { os.getenv("HOME") .. '/dev/tools/vscode-php-debug/out/phpDebug.js' }
+}
+
+require("dap").configurations.php = {
+  {
+    type = 'php',
+    request = 'launch',
+    name = 'Listen for Xdebug',
+    port = 9003
+  }
+}
+
 require("dap-go").setup({
 	-- Additional dap configurations can be added.
 	-- dap_configurations accepts a list of tables where each entry
