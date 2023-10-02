@@ -71,7 +71,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"dockerls",
 		"html",
-		"intelephense",
+		"phpactor",
 		"jsonls",
 		"pyright",
 		"tsserver",

@@ -25,7 +25,7 @@
   },
   "php.suggest.basic": false,
   "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "[python]": {
     "editor.formatOnType": true
@@ -39,4 +39,5 @@
   "extensions.ignoreRecommendations": true,
   "debug.onTaskErrors": "showErrors",
   "workbench.activityBar.visible": false,
+  "git.confirmSync": false
 }
