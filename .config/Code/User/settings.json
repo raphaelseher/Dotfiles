@@ -25,7 +25,7 @@
   },
   "php.suggest.basic": false,
   "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer",
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
   },
   "[python]": {
     "editor.formatOnType": true
@@ -37,6 +37,6 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "extensions.ignoreRecommendations": true,
-  "workbench.activityBar.visible": false,
   "debug.onTaskErrors": "showErrors",
+  "workbench.activityBar.visible": false,
 }
