@@ -12,10 +12,9 @@
   "breadcrumbs.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "keyboard.dispatch": "keyCode",
-  "window.zoomLevel": 1,
   "go.toolsManagement.autoUpdate": true,
   "git.autofetch": true,
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Natty",
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -40,4 +39,14 @@
   "debug.onTaskErrors": "showErrors",
   "workbench.activityBar.visible": false,
   "git.confirmSync": false,
+  "window.zoomLevel": 1,
+  "colorInfo.languages": [
+    {
+      "selector": "php",
+      "colors": "css"
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "quickInputList.focusBackground": "#FFFFFF33",
+  },
 }
