@@ -1,12 +1,12 @@
 {
   "editor.lineNumbers": "relative",
-  "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": false,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.quickSuggestions": {
+    "strings": true,
     "comments": true
   },
   "breadcrumbs.enabled": false,
@@ -35,6 +35,12 @@
   },
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    "php": "php",
   },
   "extensions.ignoreRecommendations": true,
   "debug.onTaskErrors": "showErrors",
