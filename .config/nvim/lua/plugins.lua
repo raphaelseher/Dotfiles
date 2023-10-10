@@ -9,10 +9,14 @@ return require("packer").startup(function(use)
 	-- use("dracula/vim")
 	use("maxmx03/dracula.nvim")
 	use("navarasu/onedark.nvim")
+	use("christianchiarulli/nvcode-color-schemes.vim")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-lua/plenary.nvim")
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
 
 	use("neovim/nvim-lspconfig")
 	use({

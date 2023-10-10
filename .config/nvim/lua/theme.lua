@@ -1,6 +1,7 @@
 vim.cmd("syntax enable")
 --vim.cmd("colorscheme sonokai")
-vim.cmd("colorscheme dracula")
+--vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme snazzy")
 vim.cmd("set background=dark")
 --vim.cmd("colorscheme monokai")
 --vim.cmd("colorscheme gruvbox")

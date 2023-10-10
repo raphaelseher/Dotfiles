@@ -3,6 +3,8 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = { "c", "lua", "vim", "cpp", "css", "html", "python", "ruby", "typescript", "javascript" },
 })
 
+require("nvim-tree").setup()
+
 require("nvim-test").setup({
 	term = "toggleterm",
 	termOpts = {
