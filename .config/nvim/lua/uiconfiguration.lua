@@ -3,7 +3,9 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = { "c", "lua", "vim", "cpp", "css", "html", "python", "ruby", "typescript", "javascript" },
 })
 
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+	hijack_netrw = false,
+})
 
 require("nvim-test").setup({
 	term = "toggleterm",
