@@ -31,3 +31,7 @@ vim.api.nvim_set_keymap("n", "<leader>di", ":lua require'dap'.step_into()<CR>", 
 vim.api.nvim_set_keymap("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>TroubleToggle<cr>", {})
+
+vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>NvimTreeToggle<cr>", {})
+
+vim.api.nvim_set_keymap("n", "<C-n>", "<cmd>ToggleTerm<cr>", {})
