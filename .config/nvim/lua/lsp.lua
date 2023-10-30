@@ -128,6 +128,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.gofmt,
+        null_ls.builtins.formatting.blade_formatter,
 		null_ls.builtins.formatting.phpcsfixer,
 		null_ls.builtins.formatting.phpcbf.with({
 			extra_args = function()
@@ -145,11 +146,6 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.phpcs.with({
 			extra_args = function()
 				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
-			end,
-		}),
-		null_ls.builtins.diagnostics.phpmd.with({
-			extra_args = function()
-				return { "cleancode,codesize,controversial,design,naming,unusedcode" }
 			end,
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
