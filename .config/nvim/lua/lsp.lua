@@ -147,11 +147,6 @@ null_ls.setup({
 				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
 			end,
 		}),
-		null_ls.builtins.diagnostics.phpmd.with({
-			extra_args = function()
-				return { "cleancode,codesize,controversial,design,naming,unusedcode" }
-			end,
-		}),
 		null_ls.builtins.diagnostics.markdownlint,
 
 		null_ls.builtins.completion.spell,
