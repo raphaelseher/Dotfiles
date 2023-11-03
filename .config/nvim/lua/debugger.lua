@@ -53,18 +53,18 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 end
 
 require("dap").adapters.php = {
-  type = 'executable',
-  command = 'node',
-  args = { os.getenv("HOME") .. '/dev/tools/vscode-php-debug/out/phpDebug.js' }
+	type = "executable",
+	command = "sh",
+	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/bin/php-debug-adapter" },
 }
 
 require("dap").configurations.php = {
-  {
-    type = 'php',
-    request = 'launch',
-    name = 'Listen for Xdebug',
-    port = 9003
-  }
+	{
+		type = "php",
+		request = "launch",
+		name = "Listen for Xdebug",
+		port = 9003,
+	},
 }
 
 require("dap-go").setup({
