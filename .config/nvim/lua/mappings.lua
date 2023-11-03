@@ -15,7 +15,11 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>fl", ":Telescope resume<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
+
+vim.api.nvim_set_keymap("n", "<leader>co", ":copen <CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>cc", ":cclose <CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>+", ":vertical resize +5<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>-", ":vertical resize -5<CR>", {})
