@@ -192,9 +192,6 @@ bar {
     position top
 }
 
-# Set Wallpaper
-exec_always --no-startup-id feh --bg-fill /home/raphael/Pictures/Wallpapers/window.webp
-
 # Keyboard - Remap CapsLock to ESC
 exec_always --no-startup-id sh -c 'sleep 30 && xmodmap ~/.Xmodmap' #disable caps lock switch
 
@@ -221,3 +218,5 @@ set_from_resource $foreground foreground #FFFFFF
 # Styling               border  backgr. text    indicator child_border
 client.focused          $primary $primary $background $primary_dark $primary
 client.background       $background
+
+include ~/.config/i3/local.conf
