@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
 	use("maxmx03/dracula.nvim")
     use("navarasu/onedark.nvim")
     use('christianchiarulli/nvcode-color-schemes.vim')
+    use({'catppuccin/nvim', as = 'catppuccin'})
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-lua/plenary.nvim")
