@@ -19,12 +19,6 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
 	vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
-	-- vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-	-- vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-	-- vim.keymap.set('n', '<leader>wl', function()
-	-- print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-	-- end, bufopts)
-	-- vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action, bufopts)
@@ -64,20 +58,13 @@ vim.api.nvim_command(
 require("mason").setup()
 require("mason-nvim-dap").setup({
 	automatic_setup = true,
-	ensure_installed = { "python", "codelldb", "node2" },
+	ensure_installed = { "php-debug-adapter" },
 })
--- require("mason-nvim-dap").setup_handlers({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"lua_ls",
-		"dockerls",
 		"html",
 		"phpactor",
 		"jsonls",
-		"pyright",
-		"tsserver",
-		"clangd",
-		"gopls",
 	},
 })
 
@@ -117,9 +104,6 @@ cmp.setup({
 		end,
 	},
 })
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -129,7 +113,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.blade_formatter,
+		null_ls.builtins.formatting.blade_formatter,
 		null_ls.builtins.formatting.phpcsfixer,
 		null_ls.builtins.formatting.phpcbf.with({
 			extra_args = function()
