@@ -8,6 +8,10 @@ require("mappings")
 
 require("lsp")
 
+require("linter")
+
+require("formatter")
+
 require("theme")
 
 require("debugger")

@@ -35,22 +35,6 @@ local on_attach = function(client, bufnr)
 
 	vim.api.nvim_set_keymap("n", "<leader>h", "lua ClangdSwitchSourceHeaderForCpp()<CR>", {})
 
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
-			callback = function()
-				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				vim.lsp.buf.format({
-					bufnr = bufnr,
-					filter = function(fmtclient)
-						return fmtclient.name == "null-ls"
-					end,
-				})
-			end,
-		})
-	end
 end
 
 function ClangdSwitchSourceHeaderForCpp()
@@ -64,7 +48,7 @@ vim.api.nvim_command(
 require("mason").setup()
 require("mason-nvim-dap").setup({
 	automatic_setup = true,
-	ensure_installed = { "python", "codelldb", "node2" },
+	ensure_installed = { "codelldb", "node2" },
 })
 -- require("mason-nvim-dap").setup_handlers({})
 require("mason-lspconfig").setup({
@@ -74,7 +58,6 @@ require("mason-lspconfig").setup({
 		"html",
 		"phpactor",
 		"jsonls",
-		"pyright",
 		"tsserver",
 		"clangd",
 		"gopls",
@@ -116,42 +99,4 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-})
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-local null_ls = require("null-ls")
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettier,
-		null_ls.builtins.formatting.black,
-		null_ls.builtins.formatting.clang_format,
-		null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.blade_formatter,
-		null_ls.builtins.formatting.phpcsfixer,
-		null_ls.builtins.formatting.phpcbf.with({
-			extra_args = function()
-				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
-			end,
-		}),
-
-		null_ls.builtins.diagnostics.eslint,
-		null_ls.builtins.diagnostics.cpplint,
-		null_ls.builtins.diagnostics.cppcheck,
-		null_ls.builtins.diagnostics.golangci_lint,
-		null_ls.builtins.diagnostics.staticcheck,
-		null_ls.builtins.diagnostics.clazy,
-		null_ls.builtins.diagnostics.pylint,
-		null_ls.builtins.diagnostics.phpcs.with({
-			extra_args = function()
-				return { "--standard=" .. vim.fn.getcwd() .. "/ruleset.xml" }
-			end,
-		}),
-		null_ls.builtins.diagnostics.markdownlint,
-
-		null_ls.builtins.completion.spell,
-	},
-	on_attach = on_attach,
 })

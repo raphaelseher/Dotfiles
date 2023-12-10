@@ -24,7 +24,13 @@ return require("packer").startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"jay-babu/mason-nvim-dap.nvim",
 	})
-	use("jose-elias-alvarez/null-ls.nvim")
+    use("mfussenegger/nvim-lint")
+    use({
+        "stevearc/conform.nvim",
+        config = function()
+            require("conform").setup()
+        end,
+    })
 
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
@@ -32,6 +38,7 @@ return require("packer").startup(function(use)
 	use("David-Kunz/cmp-npm")
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
+
 	use("voldikss/vim-floaterm")
 	use("klen/nvim-test")
 	use({
@@ -52,6 +59,7 @@ return require("packer").startup(function(use)
 
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
+
 	use("mxsdev/nvim-dap-vscode-js")
 	use({
 		"microsoft/vscode-js-debug",
