@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.zshaliases
 
+source $HOME/.anxaliases
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $HOME/.localpath
