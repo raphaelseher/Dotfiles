@@ -32,4 +32,4 @@ require("lazy").setup("plugins", {})
 --
 -- require("debugger")
 --
--- require("local_rc").load()
+require("local_rc").load()
