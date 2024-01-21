@@ -18,7 +18,6 @@ local options = {
 	undofile = true,
 	incsearch = true,
 	termguicolors = true,
-	colorcolumn = 100,
 	signcolumn = "yes",
 	secure = true,
 }
@@ -29,3 +28,7 @@ end
 
 vim.o.splitright = true
 vim.o.splitbelow = true
+
+vim.cmd([[set colorcolumn=80,120]])
+
+vim.api.nvim_set_var("netrw_liststyle", 3)
