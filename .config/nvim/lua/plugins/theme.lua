@@ -1,8 +1,6 @@
 return {
     {
         "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
         config = function()
             vim.cmd("syntax enable")
             --vim.cmd("colorscheme tokyonight")
@@ -10,11 +8,15 @@ return {
     },
     {
         "https://github.com/Mofiqul/dracula.nvim",
-        lazy = false,
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
+        lazy = false,
         config = function()
             vim.cmd("syntax enable")
-            vim.cmd("colorscheme dracula")
+            vim.cmd("colorscheme catppuccin-macchiato")
         end,
     }
 }
