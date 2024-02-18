@@ -16,7 +16,7 @@ return {
     opts = {
         formatters_by_ft = {
             lua = { "stylua" },
-            php = { "blade-formatter", "php_cs_fixer" },
+            php = { "php_cs_fixer", "blade-formatter" },
             cpp = { "clang-format" },
             go = { "goimports", "gofmt" },
             javascript = { { "prettierd", "prettier" } },

@@ -46,6 +46,9 @@ vim.api.nvim_set_keymap("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", {
 vim.api.nvim_set_keymap("n", "<leader>dn", [[:lua require"osv".launch({port = 8086})<CR>]], {})
 vim.api.nvim_set_keymap("n", "<leader>dnn", [[:lua require"osv".run_this()<CR>]], {})
 
+vim.api.nvim_set_keymap("n", "<leader>ee", [[:NvimTreeToggle<CR>]], {})
+vim.api.nvim_set_keymap("n", "<leader>ef", [[:NvimTreeFindFile<CR>]], {})
+
 vim.api.nvim_set_keymap("n", "<C-n>", "<cmd>ToggleTerm<cr>", {})
 
 local opts = { noremap = true, silent = true }
