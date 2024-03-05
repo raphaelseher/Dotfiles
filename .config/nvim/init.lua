@@ -16,6 +16,7 @@ require("mappings")
 
 require("lazy").setup("plugins", {})
 
+require("commands")
 --
 -- require("plugins")
 --
