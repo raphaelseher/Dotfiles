@@ -1,4 +1,12 @@
 {
     "runtime.version": "Lua 5.3",
-    "hint.enable": false
+    "hint.enable": false,
+    "diagnostics.globals": [
+        "vim",
+        "require",
+        "lfs"
+    ],
+    "workspace.library": [
+        "${3rd}/lfs/library"
+    ]
 }
