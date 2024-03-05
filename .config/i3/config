@@ -193,11 +193,8 @@ bar {
 }
 
 # Keyboard - Remap CapsLock to ESC
-exec_always --no-startup-id sh -c 'sleep 20 && xmodmap ~/.Xmodmap' #disable caps lock switch
-
-# Nextcloud background execution
+exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
-
 exec_always --no-startup-id env QT_QPA_PLATFORM_PLUGIN_PATH=/mnt/Data/Qt/5.15.2/gcc_64/plugins/platform flameshot &
 
 # Custom Window Configuration for Floats
