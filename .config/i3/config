@@ -192,6 +192,7 @@ bar {
     position top
 }
 
+exec_always --no-startup-id sh -c 'xss-lock --transfer-sleep-lock -- i3lock --nofork'
 # Keyboard - Remap CapsLock to ESC
 exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
