@@ -197,6 +197,7 @@ exec_always --no-startup-id sh -c 'xss-lock --transfer-sleep-lock -- i3lock --no
 exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
 exec_always --no-startup-id env QT_QPA_PLATFORM_PLUGIN_PATH=/mnt/Data/Qt/5.15.2/gcc_64/plugins/platform flameshot &
+exec_always --no-startup-id xfce4-power-manager
 
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
