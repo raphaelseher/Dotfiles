@@ -2,15 +2,16 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		config = function()
-			vim.cmd("syntax enable")
 			--vim.cmd("colorscheme tokyonight")
 		end,
 	},
 	{
 		"https://github.com/Mofiqul/dracula.nvim",
+		priority = 1000,
+		lazy = false,
 		config = function()
-			-- vim.cmd("syntax enable")
-			-- vim.cmd("colorscheme dracula")
+			vim.cmd("syntax enable")
+			vim.cmd("colorscheme dracula")
 		end,
 	},
 	{
@@ -18,14 +19,15 @@ return {
 		name = "catppuccin",
 	},
 	{
+		"morhetz/gruvbox",
+	},
+	{
 		"navarasu/onedark.nvim",
-		priority = 1000,
-		lazy = false,
 		config = function()
-			require("onedark").setup({
-				style = "deep",
-			})
-			require("onedark").load()
+			-- require("onedark").setup({
+			-- 	style = "deep",
+			-- })
+			-- require("onedark").load()
 		end,
 	},
 }
