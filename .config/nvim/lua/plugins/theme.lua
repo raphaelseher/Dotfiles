@@ -11,7 +11,6 @@ return {
 		lazy = false,
 		config = function()
 			vim.cmd("syntax enable")
-			vim.cmd("colorscheme dracula")
 		end,
 	},
 	{
@@ -19,7 +18,11 @@ return {
 		name = "catppuccin",
 	},
 	{
-		"morhetz/gruvbox",
+		"ellisonleao/gruvbox.nvim",
+		config = function()
+			vim.cmd("syntax enable")
+			vim.cmd("colorscheme gruvbox")
+		end,
 	},
 	{
 		"navarasu/onedark.nvim",
