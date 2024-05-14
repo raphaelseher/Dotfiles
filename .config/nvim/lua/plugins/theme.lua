@@ -11,6 +11,7 @@ return {
 		lazy = false,
 		config = function()
 			vim.cmd("syntax enable")
+			vim.cmd("colorscheme dracula")
 		end,
 	},
 	{
@@ -21,7 +22,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		config = function()
 			vim.cmd("syntax enable")
-			vim.cmd("colorscheme gruvbox")
+			--vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
