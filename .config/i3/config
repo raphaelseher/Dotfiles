@@ -192,13 +192,12 @@ bar {
     position top
 }
 
+exec_always --no-startup-id sh -c 'xss-lock --transfer-sleep-lock -- i3lock --nofork'
 # Keyboard - Remap CapsLock to ESC
-exec_always --no-startup-id sh -c 'sleep 20 && xmodmap ~/.Xmodmap' #disable caps lock switch
-
-# Nextcloud background execution
+exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
-
 exec_always --no-startup-id env QT_QPA_PLATFORM_PLUGIN_PATH=/mnt/Data/Qt/5.15.2/gcc_64/plugins/platform flameshot &
+exec_always --no-startup-id xfce4-power-manager
 
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
@@ -210,8 +209,8 @@ for_window[class="bkautomat"] floating enable
 default_border pixel 1
 
 # .Xresources color variables
-set_from_resource $primary ui.primary #34BFD0
-set_from_resource $primary_dark ui.primary-darker #00919E
+set_from_resource $primary ui.primary #8be9fd
+set_from_resource $primary_dark ui.primary-darker #bd93f9
 set_from_resource $background background #000000
 set_from_resource $foreground foreground #FFFFFF
 

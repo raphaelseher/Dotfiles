@@ -43,17 +43,28 @@ return {
 				},
 			}
 
+			dap.adapters.codelldb = {
+				type = "server",
+				port = "${port}",
+				executable = {
+					command = "/home/raphael/.local/share/nvim/mason/bin/codelldb",
+					args = { "--port", "${port}" },
+				},
+			}
+
 			dap.configurations.cpp = {
-				name = "Launch lldb",
-				type = "lldb", -- matches the adapter
-				request = "launch", -- could also attach to a currently running process
-				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-				end,
-				cwd = "${workspaceFolder}",
-				stopOnEntry = false,
-				args = {},
-				runInTerminal = false,
+				{
+					name = "Launch file",
+					type = "codelldb", -- matches the adapter
+					request = "launch", -- could also attach to a currently running process
+					program = function()
+						return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					end,
+					cwd = "${workspaceFolder}",
+					stopOnEntry = false,
+					args = {},
+					runInTerminal = true,
+				},
 			}
 
 			dap.adapters.nlua = function(callback, config)

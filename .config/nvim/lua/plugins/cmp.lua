@@ -22,6 +22,7 @@ return {
 					{ name = "buffer" },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+					{ name = "vim-dadbod-completion" },
 				},
 				mapping = {
 					["<cr>"] = cmp.mapping.confirm({ select = true }),

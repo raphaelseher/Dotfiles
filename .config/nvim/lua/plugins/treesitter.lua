@@ -1,28 +1,32 @@
 return {
-	{ 
-        "nvim-treesitter/nvim-treesitter", 
-        build = ":TSUpdate",
-        config = function () 
-              local configs = require("nvim-treesitter.configs")
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			local configs = require("nvim-treesitter.configs")
 
-              configs.setup({
-                  ensure_installed = {
-                      "c",
-                      "lua",
-                      "vim",
-                      "vimdoc",
-                      "cpp",
-                      "css",
-                      "html",
-                      "typescript",
-                      "javascript",
-                      "go",
-                      "php"
-                  },
-                  sync_install = false,
-                  highlight = { enable = true },
-                  indent = { enable = true },  
-                })
-            end
-    }
+			configs.setup({
+				ensure_installed = {
+					"c",
+					"lua",
+					"vim",
+					"vimdoc",
+					"cpp",
+					"css",
+					"html",
+					"typescript",
+					"javascript",
+					"go",
+					"php",
+					"sql",
+				},
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },
+				disable = function(lang, bufnr)
+					return api.nvim_buf_line_count(bufnr) > 10000
+				end,
+			})
+		end,
+	},
 }
