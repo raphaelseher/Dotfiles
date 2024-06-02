@@ -108,3 +108,5 @@ source $HOME/.anxaliases
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $HOME/.localpath
+
+bindkey "^V" undefined-key
