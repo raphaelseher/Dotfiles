@@ -55,5 +55,5 @@
     "quickInputList.focusBackground": "#FFFFFF33",
   },
   "cmake.showOptionsMovedNotification": false,
-  "workbench.colorTheme": "Atom One Light",
+  "workbench.colorTheme": "Dracula",
 }
