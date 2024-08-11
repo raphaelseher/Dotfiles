@@ -23,9 +23,6 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "php.suggest.basic": false,
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
   "[python]": {
     "editor.formatOnType": true
   },
@@ -55,5 +52,17 @@
     "quickInputList.focusBackground": "#FFFFFF33",
   },
   "cmake.showOptionsMovedNotification": false,
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "workbench.sideBar.location": "right",
+  "cmake.generator": "",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+  "clang-tidy.buildPath": "${workspaceFolder}/build",
+  "editor.inlayHints.enabled": "on",
 }
