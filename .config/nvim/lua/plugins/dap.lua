@@ -72,6 +72,9 @@ return {
 			end
 		end,
 	},
-	{ "rcarriga/nvim-dap-ui" },
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+	},
 	{ "jbyuki/one-small-step-for-vimkind" },
 }
