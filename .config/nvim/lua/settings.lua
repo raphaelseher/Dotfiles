@@ -7,19 +7,19 @@ local options = {
 	exrc = true,
 	nu = true,
 	relativenumber = true,
-	nohlsearch = true,
 	hidden = true,
 	ignorecase = true,
-	noerrorbells = true,
-	nowrap = true,
-	noswapfile = true,
-	nobackup = true,
+	errorbells = false,
+	wrap = false,
+	swapfile = false,
 	undodir = vim.fn.stdpath("config") .. "/undodir",
 	undofile = true,
 	incsearch = true,
 	termguicolors = true,
 	signcolumn = "yes",
 	secure = true,
+	backup = false,
+	hlsearch = false
 }
 
 for key, value in pairs(options) do
