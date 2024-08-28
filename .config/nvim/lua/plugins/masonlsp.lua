@@ -19,7 +19,8 @@ return {
 				"lua_ls",
 				"dockerls",
 				"html",
-				"phpactor",
+				-- "phpactor",
+				"intelephense",
 				"jsonls",
 				"tsserver",
 				"clangd",
@@ -31,11 +32,11 @@ return {
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
 				end,
-				["phpactor"] = function()
-					require("lspconfig").phpactor.setup({
-						cmd = { "phpactor", "language-server", "-vvv" },
-					})
-				end,
+				-- ["phpactor"] = function()
+				-- 	require("lspconfig").phpactor.setup({
+				-- 		cmd = { "phpactor", "language-server", "-vvv" },
+				-- 	})
+				-- end,
 				["lua_ls"] = function()
 					require("lspconfig").lua_ls.setup({
 						settings = {
