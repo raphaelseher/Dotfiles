@@ -52,7 +52,6 @@
     "quickInputList.focusBackground": "#FFFFFF33",
   },
   "cmake.showOptionsMovedNotification": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "cmake.pinnedCommands": [
@@ -65,4 +64,8 @@
   "C_Cpp.codeAnalysis.clangTidy.enabled": false,
   "clang-tidy.buildPath": "${workspaceFolder}/build",
   "editor.inlayHints.enabled": "on",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.activityBar.location": "hidden",
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Dracula Theme",
 }
