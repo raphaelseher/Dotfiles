@@ -15,10 +15,10 @@ alias envd="deactivate"
 # docker
 alias dimg="docker images"
 alias dps="docker ps"
-alias dcbuild="docker-compose build"
-alias dcup="docker-compose up"
-alias dcdown="docker-compose down"
-alias dcrestart="docker-compose restart"
+alias dcbuild="docker compose build"
+alias dcup="docker compose up"
+alias dcdown="docker compose down"
+alias dcrestart="docker compose restart"
 
 # allows kitty to work with ssh
 alias ssh='env TERM=xterm-256color ssh'
