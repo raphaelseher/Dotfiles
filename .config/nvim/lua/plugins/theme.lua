@@ -11,7 +11,7 @@ return {
 		lazy = false,
 		config = function()
 			vim.cmd("syntax enable")
-			vim.cmd("colorscheme dracula")
+			-- vim.cmd("colorscheme dracula")
 		end,
 	},
 	{
@@ -28,10 +28,10 @@ return {
 	{
 		"navarasu/onedark.nvim",
 		config = function()
-			-- require("onedark").setup({
-			-- 	style = "deep",
-			-- })
-			-- require("onedark").load()
+			require("onedark").setup({
+				style = "cool",
+			})
+			require("onedark").load()
 		end,
 	},
 }
