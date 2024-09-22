@@ -33,3 +33,12 @@ vim.api.nvim_create_user_command("FormatStatus", function()
 end, {
 	desc = "Print status of autoformat-on-save",
 })
+
+-- Highlight yanked text for 200ms using the "Visual" highlight group
+vim.api.nvim_create_augroup("highlight_yank", {})
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = "highlight_yank",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
+	end,
+})
