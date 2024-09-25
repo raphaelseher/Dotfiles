@@ -15,6 +15,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+gaps top 30
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -53,8 +55,8 @@ bindsym $mod+Shift+q kill
 # bindsum Mod1+Shift+q kill # same with ctrl (Mod1) for Mac RDP
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -show drun -sidebar-mode"
-bindsym $mod+Tab exec --no-startup-id "rofi -modi window -show window"
+bindsym $mod+d exec --no-startup-id "~/.config/polybar/forest/scripts/launcher.sh"
+bindsym $mod+BackSpace exec --no-startup-id "~/.config/polybar/forest/scripts/powermenu.sh"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -182,15 +184,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh &
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status --config ~/.config/i3status/i3status.conf
-    position top
-}
+# bar {
+#     status_command i3status --config ~/.config/i3status/i3status.conf
+#     position top
+# }
 
 exec_always --no-startup-id sh -c 'xss-lock --transfer-sleep-lock -- i3lock --nofork'
 # Keyboard - Remap CapsLock to ESC
@@ -198,6 +197,7 @@ exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
 exec_always --no-startup-id env QT_QPA_PLATFORM_PLUGIN_PATH=/mnt/Data/Qt/5.15.2/gcc_64/plugins/platform flameshot &
 exec_always --no-startup-id xfce4-power-manager
+exec_always --no-startup-id sh -c '~/.config/polybar/forest/launch.sh'
 
 # Custom Window Configuration for Floats
 for_window[window_role="pop-up"] floating enable
