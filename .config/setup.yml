@@ -1,0 +1,20 @@
+---
+- name: Setup custom Linux configuration
+  hosts: localhost
+  tasks:
+    - name: Install required packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - i3
+        - polybar
+      become: yes  # Use this if you need sudo privileges
+
+    - name: Create symlink for pulseaudio-control.bash
+      file:
+        src: "{{ ansible_env.HOME }}/.config/polybar/forest/scripts/pulseaudio-control.bash"
+        dest: "{{ ansible_env.HOME }}/.local/bin/pulseaudio-control"
+        state: link
+        force: yes
+
