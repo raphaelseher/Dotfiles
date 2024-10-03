@@ -12,6 +12,20 @@ return {
 			mode = "",
 			desc = "Format buffer",
 		},
+		{
+			-- Format selected lines in visual mode
+			"<leader>f",
+			function()
+				require("conform").format({
+					async = true,
+					lsp_fallback = true,
+					range = vim.fn.getpos("'<")[2],
+					vim.fn.getpos("'>")[2],
+				})
+			end,
+			mode = "v",
+			desc = "Format selected lines",
+		},
 	},
 	opts = {
 		formatters_by_ft = {
