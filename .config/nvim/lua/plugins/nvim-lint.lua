@@ -6,7 +6,7 @@ return {
 
 		lint.linters_by_ft = {
 			lua = { "luacheck" },
-			cpp = { "cppcheck", "clazy" },
+			cpp = { "cpplint", "clangtidy" },
 			php = { "phpcs" },
 			html = { "eslint" },
 			javascript = { "eslint" },
