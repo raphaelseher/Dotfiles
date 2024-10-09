@@ -76,6 +76,11 @@ require("mason-lspconfig").setup_handlers({
 	function(server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup({})
 	end,
+	["tsserver"] = function()
+		require("lspconfig").tsserver.setup({
+			cmd = { "node", "/home/raphael/.nvm/versions/node/v18.16.0/lib/node_modules/typescript/lib/tsserver.js" },
+		})
+	end,
 	-- Next, you can provide a dedicated handler for specific servers.
 	-- For example, a handler override for the `rust_analyzer`:
 	-- ["rust_analyzer"] = function ()
