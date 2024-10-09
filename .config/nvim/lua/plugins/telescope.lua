@@ -10,6 +10,7 @@ return {
 					file_ignore_patterns = {
 						"node_modules",
 						"vendor",
+						".git",
 					},
 					preview = {
 						filesize_limit = 0.5, -- MB
@@ -20,9 +21,9 @@ return {
 							flip_columns = 220,
 						},
 						vertical = {
-							prompt_position = "top", -- Keeps the search prompt at the top
-							preview_height = 0.7, -- Adjust the height of the preview window (40% of total height)
-							mirror = true, -- Puts the preview below the results
+							prompt_position = "top",
+							preview_height = 0.7,
+							mirror = true,
 						},
 					},
 				},
