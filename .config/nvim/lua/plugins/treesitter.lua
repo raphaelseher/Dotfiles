@@ -29,4 +29,13 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		opts = {
+			enable = true,
+			max_lines = 1,
+			multiline_threshold = 2,
+		},
+	},
 }
