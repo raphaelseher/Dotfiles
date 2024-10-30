@@ -32,11 +32,25 @@ return {
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
 				end,
-				-- ["phpactor"] = function()
-				-- 	require("lspconfig").phpactor.setup({
-				-- 		cmd = { "phpactor", "language-server", "-vvv" },
-				-- 	})
-				-- end,
+				["intelephense"] = function()
+					require("lspconfig").intelephense.setup({
+						on_attach = function(client)
+							client.server_capabilities.renameProvider = false
+						end,
+					})
+				end,
+				["phpactor"] = function()
+					require("lspconfig").phpactor.setup({
+						init_options = {
+							["code_transform.refactor.generate_accessor.prefix"] = "get",
+							["code_transform.refactor.generate_accessor.upper_case_first"] = true,
+							["language_server_code_transform.import_globals"] = true,
+						},
+						on_attach = function(client)
+							client.server_capabilities.completionProvider = false
+						end,
+					})
+				end,
 				["lua_ls"] = function()
 					require("lspconfig").lua_ls.setup({
 						settings = {
