@@ -80,6 +80,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 		vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+
 		vim.api.nvim_set_keymap("n", "<leader>h", "lua ClangdSwitchSourceHeaderForCpp()<CR>", {})
 	end,
 })
@@ -90,12 +91,4 @@ end
 
 vim.api.nvim_command(
 	"autocmd FileType c,cpp,h,hpp nnoremap <buffer> <leader>h :lua ClangdSwitchSourceHeaderForCpp()<CR>"
-)
-
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>al",
-	[[:cexpr system("./docker/bin/tools.sh test psalm-diff origin/staging | grep -v 'No problems found*' |  grep -vE '^[0-9]+/[0-9]+: Checking file' | grep -v 'Checking *'")
-<CR>]],
-	{}
 )
