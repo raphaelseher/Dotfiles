@@ -26,8 +26,12 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+k ctrl+m",
+    "key": "ctrl+a c",
     "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+a n",
+    "command": "workbench.action.terminal.focusNext"
   },
   {
     "key": "ctrl+k ctrl+t",

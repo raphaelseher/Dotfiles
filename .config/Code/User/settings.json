@@ -65,7 +65,12 @@
   "clang-tidy.buildPath": "${workspaceFolder}/build",
   "editor.inlayHints.enabled": "on",
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.activityBar.location": "hidden",
   "explorer.confirmDelete": false,
   "workbench.colorTheme": "Dracula Theme",
+  "laravel-pint.enable": true,
+  "git.suggestSmartCommit": false,
+  "workbench.activityBar.location": "hidden",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }
