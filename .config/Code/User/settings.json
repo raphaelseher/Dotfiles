@@ -5,6 +5,10 @@
   "editor.renderControlCharacters": false,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
   // "workbench.editor.showTabs": "single",
   "editor.quickSuggestions": {
     "strings": true,
@@ -27,6 +31,9 @@
     "editor.formatOnType": true
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[cpp]": {
@@ -70,7 +77,8 @@
   "laravel-pint.enable": true,
   "git.suggestSmartCommit": false,
   "workbench.activityBar.location": "hidden",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
   },
+  "phpmd.command": "./vendor/bin/phpmd"
 }
