@@ -76,9 +76,10 @@
   "workbench.colorTheme": "Dracula Theme",
   "laravel-pint.enable": true,
   "git.suggestSmartCommit": false,
-  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.location": "bottom",
   "[php]": {
     "editor.defaultFormatter": "junstyle.php-cs-fixer"
   },
-  "phpmd.command": "./vendor/bin/phpmd"
+  "phpmd.command": "./vendor/bin/phpmd",
+  "window.customTitleBarVisibility": "auto"
 }
