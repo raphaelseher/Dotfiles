@@ -35,7 +35,7 @@ return {
 				["intelephense"] = function()
 					require("lspconfig").intelephense.setup({
 						on_attach = function(client)
-							client.server_capabilities.renameProvider = false
+							client.server_capabilities.renameProvider = true
 						end,
 					})
 				end,
@@ -47,7 +47,7 @@ return {
 							["language_server_code_transform.import_globals"] = true,
 						},
 						on_attach = function(client)
-							client.server_capabilities.completionProvider = false
+							client.server_capabilities.renameProvider = false
 						end,
 					})
 				end,
