@@ -5,6 +5,10 @@
   "editor.renderControlCharacters": false,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
   // "workbench.editor.showTabs": "single",
   "editor.quickSuggestions": {
     "strings": true,
@@ -27,6 +31,9 @@
     "editor.formatOnType": true
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[cpp]": {
@@ -65,7 +72,14 @@
   "clang-tidy.buildPath": "${workspaceFolder}/build",
   "editor.inlayHints.enabled": "on",
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.activityBar.location": "hidden",
   "explorer.confirmDelete": false,
   "workbench.colorTheme": "Dracula Theme",
+  "laravel-pint.enable": true,
+  "git.suggestSmartCommit": false,
+  "workbench.activityBar.location": "bottom",
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "phpmd.command": "./vendor/bin/phpmd",
+  "window.customTitleBarVisibility": "auto"
 }
