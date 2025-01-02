@@ -17,6 +17,9 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		config = function()
+			vim.cmd("colorscheme catppuccin-mocha")
+		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -31,7 +34,7 @@ return {
 			require("onedark").setup({
 				style = "deep",
 			})
-			require("onedark").load()
+			-- require("onedark").load()
 		end,
 	},
 }
