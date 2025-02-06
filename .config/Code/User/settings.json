@@ -73,13 +73,13 @@
   "editor.inlayHints.enabled": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Atom One Light",
   "laravel-pint.enable": true,
   "git.suggestSmartCommit": false,
-  "workbench.activityBar.location": "bottom",
+  "workbench.activityBar.location": "top",
   "[php]": {
     "editor.defaultFormatter": "junstyle.php-cs-fixer"
   },
   "phpmd.command": "./vendor/bin/phpmd",
-  "window.customTitleBarVisibility": "auto"
+  "window.customTitleBarVisibility": "auto",
 }
