@@ -22,7 +22,6 @@ return {
 				"phpactor",
 				"intelephense",
 				"jsonls",
-				"tsserver",
 				"clangd",
 				-- "gopls",
 			},
