@@ -27,51 +27,68 @@ return {
 				"gopls",
 			},
 		},
-		config = function()
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({})
-				end,
-				["intelephense"] = function()
-					require("lspconfig").intelephense.setup({
-						on_attach = function(client)
-							client.server_capabilities.renameProvider = true
-						end,
-					})
-				end,
-				["phpactor"] = function()
-					require("lspconfig").phpactor.setup({
-						init_options = {
-							["code_transform.refactor.generate_accessor.prefix"] = "get",
-							["code_transform.refactor.generate_accessor.upper_case_first"] = true,
-							["language_server_code_transform.import_globals"] = true,
-						},
-						on_attach = function(client)
-							client.server_capabilities.renameProvider = false
-						end,
-					})
-				end,
-				["lua_ls"] = function()
-					require("lspconfig").lua_ls.setup({
-						settings = {
-							Lua = {
-								runtime = {
-									version = "LuaJIT",
-									path = vim.split(package.path, ";"),
-								},
-								diagnostics = {
-									enable = false,
-									globals = {
-										"vim",
-										"require",
-									},
-								},
-							},
-						},
-					})
-				end,
-			})
-		end,
+        config = function()
+            -- mason-lspconfig now accepts handlers via the setup() call.
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "dockerls",
+                    "html",
+                    "intelephense",
+                    "jsonls",
+                    "tsserver",
+                    "clangd",
+                    "gopls",
+                },
+                handlers = {
+                    -- default handler
+                    function(server_name)
+                        require("lspconfig")[server_name].setup({})
+                    end,
+                    clangd = function()
+                        require("lspconfig").clangd.setup({
+                            cmd = { "clangd", "--background-index", "--clang-tidy" },
+                            root_dir = require('lspconfig.util').root_pattern("compile_commands.json", ".git")
+                        })
+                    end,
+                    intelephense = function()
+                        require("lspconfig").intelephense.setup({
+                            on_attach = function(client)
+                                client.server_capabilities.renameProvider = true
+                            end,
+                        })
+                    end,
+                    phpactor = function()
+                        require("lspconfig").phpactor.setup({
+                            init_options = {
+                                ["code_transform.refactor.generate_accessor.prefix"] = "get",
+                                ["code_transform.refactor.generate_accessor.upper_case_first"] = true,
+                                ["language_server_code_transform.import_globals"] = true,
+                            },
+                            on_attach = function(client)
+                                client.server_capabilities.renameProvider = false
+                            end,
+                        })
+                    end,
+                    lua_ls = function()
+                        require("lspconfig").lua_ls.setup({
+                            settings = {
+                                Lua = {
+                                    runtime = {
+                                        version = "LuaJIT",
+                                        path = vim.split(package.path, ";"),
+                                    },
+                                    diagnostics = {
+                                        enable = false,
+                                        globals = { "vim", "require" },
+                                    },
+                                },
+                            },
+                        })
+                    end,
+                },
+            })
+        end,
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
