@@ -17,9 +17,7 @@
   "breadcrumbs.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "keyboard.dispatch": "keyCode",
-  "go.toolsManagement.autoUpdate": true,
   "git.autofetch": true,
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -36,14 +34,35 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
+  "[cpp]": {},
   "tailwindCSS.includeLanguages": {
     "html": "html",
     "javascript": "javascript",
     "css": "css",
     "php": "php",
+  },
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "[dart]": {
+    // Automatically format code on save and during typing of certain characters
+    // (like `;` and `}`).
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    // Draw a guide line at 80 characters, where Dart's formatting will wrap code.
+    "editor.rulers": [
+      80
+    ],
+    // Disables built-in highlighting of words that match your selection. Without
+    // this, all instances of the selected text will be highlighted, interfering
+    // with Dart's ability to highlight only exact references to the selected variable.
+    "editor.selectionHighlight": false,
+    // Allows pressing <TAB> to complete snippets such as `for` even when the
+    // completion list is not visible.
+    "editor.tabCompletion": "onlySnippets",
+    // By default, VS Code will populate code completion with words found in the
+    // matching documents when a language service does not provide its own completions.
+    // This results in code completion suggesting words when editing comments and
+    // strings. This setting will prevent that.
+    "editor.wordBasedSuggestions": "off",
   },
   "extensions.ignoreRecommendations": true,
   "debug.onTaskErrors": "showErrors",
@@ -58,28 +77,58 @@
   "workbench.colorCustomizations": {
     "quickInputList.focusBackground": "#FFFFFF33",
   },
-  "cmake.showOptionsMovedNotification": false,
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
-  "workbench.sideBar.location": "right",
-  "cmake.generator": "",
-  "C_Cpp.intelliSenseEngine": "disabled",
-  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
-  "clang-tidy.buildPath": "${workspaceFolder}/build",
   "editor.inlayHints.enabled": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Atom One Light",
   "laravel-pint.enable": true,
   "git.suggestSmartCommit": false,
   "workbench.activityBar.location": "top",
   "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    "editor.defaultFormatter": "laravel.vscode-laravel"
   },
-  "phpmd.command": "./vendor/bin/phpmd",
   "window.customTitleBarVisibility": "auto",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "php": false
+  },
+  "workbench.colorTheme": "Dracula Pro",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.default.defines": [],
+  "C_Cpp.default.macFrameworkPath": [],
+  "C_Cpp.default.compilerPath": "/opt/homebrew/opt/llvm/bin/clang",
+  "C_Cpp.default.cStandard": "c23",
+  "C_Cpp.default.cppStandard": "c++23",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "/opt/homebrew/opt/llvm/include/c++/v1",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark (Medium)",
+  "workbench.preferredLightColorTheme": "Gruvbox Light (Medium)",
+  "git.openRepositoryInParentFolders": "never",
+  "chat.tools.urls.autoApprove": {
+    "https://pub.dev": true
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "chat.viewSessions.orientation": "stacked",
+  "zig.zls.enabled": "on",
+  "c-cpp-flylint.clang.enable": false,
+  "c-cpp-flylint.flexelint.enable": false,
+  "c-cpp-flylint.flawfinder.enable": false,
+  "c-cpp-flylint.lizard.enable": false,
+  "chat.agentsControl.enabled": false,
+  "window.commandCenter": false,
 }
