@@ -5,8 +5,8 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			lua = { "luacheck" },
-			cpp = { "cpplint", "clangtidy" },
+            -- lua = { "luacheck" },
+			cpp = { "cpplint", "clangtidy", "cppcheck" },
 			php = { "phpcs" },
 			html = { "eslint" },
 			javascript = { "eslint" },
