@@ -24,7 +24,7 @@ return {
 				"jsonls",
 				"tsserver",
 				"clangd",
-				"gopls",
+				-- "gopls",
 			},
 		},
 		config = function()
@@ -36,17 +36,34 @@ return {
 					require("lspconfig").intelephense.setup({
 						on_attach = function(client)
 							client.server_capabilities.renameProvider = true
+							client.server_capabilities.definitionProvider = true
 						end,
+						settings = {
+							intelephense = {
+								files = {
+									maxSize = 1000000,
+								},
+								environment = {
+									includePaths = {
+										"*/tmp/cache/**",
+										"*/tmp/**",
+									},
+								},
+							},
+						},
 					})
 				end,
 				["phpactor"] = function()
 					require("lspconfig").phpactor.setup({
 						init_options = {
-							["code_transform.refactor.generate_accessor.prefix"] = "get",
-							["code_transform.refactor.generate_accessor.upper_case_first"] = true,
-							["language_server_code_transform.import_globals"] = true,
+							["indexer.exclude_patterns"] = {
+								"*/cache/*",
+							},
 						},
 						on_attach = function(client)
+							client.server_capabilities.completionProvider = false
+							client.server_capabilities.hoverProvider = false
+							client.server_capabilities.definitionProvider = false
 							client.server_capabilities.renameProvider = false
 						end,
 					})
