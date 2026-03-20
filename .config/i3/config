@@ -26,6 +26,8 @@ font pango:monospace 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+exec --no-startup-id xrdb -merge ~/.Xresources
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -195,6 +197,8 @@ exec_always --no-startup-id sh -c 'setxkbmap -option "caps:swapescape"'
 exec_always --no-startup-id nextcloud --background &
 exec_always --no-startup-id env QT_QPA_PLATFORM_PLUGIN_PATH=/mnt/Data/Qt/5.15.2/gcc_64/plugins/platform flameshot &
 exec_always --no-startup-id xfce4-power-manager
+exec_always --no-startup-id /usr/libexec/gsd-xsettings
+
 # exec_always --no-startup-id sh -c '~/.config/polybar/forest/launch.sh'
 
 # Custom Window Configuration for Floats
