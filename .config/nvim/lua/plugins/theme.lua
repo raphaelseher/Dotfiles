@@ -1,5 +1,11 @@
 return {
 	{
+		"folke/tokyonight.nvim",
+		config = function()
+			vim.cmd("colorscheme tokyonight")
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = function()
@@ -30,14 +36,5 @@ return {
 		config = function()
 			-- vim.cmd("colorscheme dracula_pro")
 		end,
-	},
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-		config = function()
-			vim.cmd("colorscheme tokyonight")
-		end,
-	},
+	}
 }

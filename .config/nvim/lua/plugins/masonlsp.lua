@@ -19,7 +19,7 @@ return {
 				"lua_ls",
 				"dockerls",
 				"html",
-				-- "phpactor",
+				"phpactor",
 				"intelephense",
 				"jsonls",
 				"tsserver",
@@ -31,6 +31,12 @@ return {
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
+				end,
+				clangd = function()
+						require("lspconfig").clangd.setup({
+								cmd = { "clangd", "--background-index", "--clang-tidy" },
+								root_dir = require('lspconfig.util').root_pattern("compile_commands.json", ".git")
+						})
 				end,
 				["intelephense"] = function()
 					require("lspconfig").intelephense.setup({
