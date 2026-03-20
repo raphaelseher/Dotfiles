@@ -2,7 +2,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		config = function()
-			--vim.cmd("colorscheme tokyonight")
+			vim.cmd("colorscheme tokyonight")
 		end,
 	},
 	{
@@ -34,7 +34,7 @@ return {
 			require("onedark").setup({
 				style = "deep",
 			})
-			require("onedark").load()
+			-- require("onedark").load()
 		end,
 	},
 }
