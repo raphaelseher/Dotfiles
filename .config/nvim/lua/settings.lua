@@ -19,7 +19,8 @@ local options = {
 	signcolumn = "yes",
 	secure = true,
 	backup = false,
-	hlsearch = false
+	hlsearch = false,
+	autoread = true,
 }
 
 for key, value in pairs(options) do
