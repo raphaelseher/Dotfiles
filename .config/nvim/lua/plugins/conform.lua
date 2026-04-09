@@ -7,7 +7,7 @@ return {
 			-- Customize or remove this keymap to your liking
 			"<leader>f",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true })
+				require("conform").format({ async = true, lsp_format = "fallback" })
 			end,
 			mode = "",
 			desc = "Format buffer",
@@ -16,11 +16,15 @@ return {
 			-- Format selected lines in visual mode
 			"<leader>f",
 			function()
+				local start_pos = vim.fn.getpos("'<")
+				local end_pos = vim.fn.getpos("'>")
 				require("conform").format({
 					async = true,
-					lsp_fallback = true,
-					range = vim.fn.getpos("'<")[2],
-					vim.fn.getpos("'>")[2],
+					lsp_format = "fallback",
+					range = {
+						start = { start_pos[2], start_pos[3] - 1 },
+						["end"] = { end_pos[2], end_pos[3] - 1 },
+					},
 				})
 			end,
 			mode = "v",
@@ -41,9 +45,9 @@ return {
 			end,
 			cpp = { "clang-format" },
 			go = { "goimports", "gofmt" },
-			javascript = { { "prettierd", "prettier" } },
-			typescript = { { "prettierd", "prettier" } },
-			html = { { "prettierd", "prettier" } },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
+			typescript = { "prettierd", "prettier", stop_after_first = true },
+			html = { "prettierd", "prettier", stop_after_first = true },
 			["*"] = { "codespell" },
 			["_"] = { "trim_whitespace" },
 		},
@@ -52,7 +56,7 @@ return {
 			if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 				return
 			end
-			return { timeout_ms = 500, lsp_fallback = "fallback" }
+			return { timeout_ms = 500, lsp_format = "fallback" }
 		end,
 	},
 }

@@ -2,7 +2,22 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "williamboman/mason-lspconfig.nvim" },
+			{
+				"williamboman/mason-lspconfig.nvim",
+				opts = {
+					ensure_installed = {
+						"lua_ls",
+						"dockerls",
+						"html",
+						"phpactor",
+						"intelephense",
+						"jsonls",
+						"clangd",
+						-- "gopls",
+					},
+					automatic_enable = true,
+				},
+			},
 			{
 				"williamboman/mason.nvim",
 				opts = {
@@ -14,84 +29,59 @@ return {
 				},
 			},
 		},
-		opts = {
-			ensure_installed = {
-				"lua_ls",
-				"dockerls",
-				"html",
-				"phpactor",
-				"intelephense",
-				"jsonls",
-				"clangd",
-				-- "gopls",
-			},
-		},
 		config = function()
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({})
+			require("mason").setup()
+			require("mason-lspconfig").setup()
+
+			-- clangd with custom cmd and root_dir
+			vim.lsp.config("clangd", {
+				cmd = { "clangd", "--background-index", "--clang-tidy" },
+				root_markers = { "compile_commands.json", ".git" },
+			})
+
+			-- intelephense
+			vim.lsp.config("intelephense", {
+				on_attach = function(client)
+					client.server_capabilities.renameProvider = true
+					client.server_capabilities.definitionProvider = true
 				end,
-				clangd = function()
-						require("lspconfig").clangd.setup({
-								cmd = { "clangd", "--background-index", "--clang-tidy" },
-								root_dir = require('lspconfig.util').root_pattern("compile_commands.json", ".git")
-						})
-				end,
-				["intelephense"] = function()
-					require("lspconfig").intelephense.setup({
-						on_attach = function(client)
-							client.server_capabilities.renameProvider = true
-							client.server_capabilities.definitionProvider = true
-						end,
-						settings = {
-							intelephense = {
-								files = {
-									maxSize = 1000000,
-								},
-								environment = {
-									includePaths = {
-										"*/tmp/cache/**",
-										"*/tmp/**",
-									},
-								},
-							},
+				settings = {
+					intelephense = {
+						files = { maxSize = 1000000 },
+						environment = {
+							includePaths = { "*/tmp/cache/**", "*/tmp/**" },
 						},
-					})
+					},
+				},
+			})
+
+			-- phpactor
+			vim.lsp.config("phpactor", {
+				init_options = {
+					["indexer.exclude_patterns"] = { "*/cache/*" },
+				},
+				on_attach = function(client)
+					client.server_capabilities.completionProvider = false
+					client.server_capabilities.hoverProvider = false
+					client.server_capabilities.definitionProvider = false
+					client.server_capabilities.renameProvider = false
 				end,
-				["phpactor"] = function()
-					require("lspconfig").phpactor.setup({
-						init_options = {
-							["indexer.exclude_patterns"] = {
-								"*/cache/*",
-							},
+			})
+
+			-- lua_ls
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+							path = vim.split(package.path, ";"),
 						},
-						on_attach = function(client)
-							client.server_capabilities.completionProvider = false
-							client.server_capabilities.hoverProvider = false
-							client.server_capabilities.definitionProvider = false
-							client.server_capabilities.renameProvider = false
-						end,
-					})
-				end,
-				["lua_ls"] = function()
-					require("lspconfig").lua_ls.setup({
-						settings = {
-							Lua = {
-								runtime = {
-									version = "LuaJIT",
-									path = vim.split(package.path, ";"),
-								},
-								diagnostics = {
-									enable = false,
-									globals = {
-										"vim",
-										"require",
-									},
-								},
-							},
+						diagnostics = {
+							enable = false,
+							globals = { "vim", "require" },
 						},
-					})
-				end,
+					},
+				},
 			})
 		end,
 	},

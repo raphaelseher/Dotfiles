@@ -28,13 +28,13 @@ return {
 			--require("onedark").load()
 		end,
 	},
-	{
-		dir = "~/.local/share/nvim/themes/dracula_pro",
-		name = "dracula_pro",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- vim.cmd("colorscheme dracula_pro")
-		end,
-	}
+	-- {
+	-- 	dir = "~/.local/share/nvim/themes/dracula_pro",
+	-- 	name = "dracula_pro",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		-- vim.cmd("colorscheme dracula_pro")
+	-- 	end,
+	-- }
 }
