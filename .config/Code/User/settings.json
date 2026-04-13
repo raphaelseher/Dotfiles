@@ -81,6 +81,7 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
+  "cmake.ctest.testExplorerIntegrationEnabled": true,
   "editor.inlayHints.enabled": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false,
@@ -98,7 +99,7 @@
     "scminput": false,
     "php": false
   },
-  "workbench.colorTheme": "Dracula Pro",
+  "workbench.colorTheme": "Tokyo Night",
   "C_Cpp.intelliSenseEngine": "disabled",
   "C_Cpp.default.defines": [],
   "C_Cpp.default.macFrameworkPath": [],
@@ -131,4 +132,5 @@
   "c-cpp-flylint.lizard.enable": false,
   "chat.agentsControl.enabled": false,
   "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
 }
