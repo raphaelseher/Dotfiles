@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 function ClangdSwitchSourceHeaderForCpp()
-	vim.api.nvim_command(":ClangdSwitchSourceHeader")
+	vim.api.nvim_command(":LspClangdSwitchSourceHeader")
 end
 
 vim.api.nvim_command(
