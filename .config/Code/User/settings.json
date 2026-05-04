@@ -18,6 +18,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "keyboard.dispatch": "keyCode",
   "git.autofetch": true,
+  "git.addAICoAuthor": "off",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -99,7 +100,7 @@
     "scminput": false,
     "php": false
   },
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Dracula Pro (Buffy)",
   "C_Cpp.intelliSenseEngine": "disabled",
   "C_Cpp.default.defines": [],
   "C_Cpp.default.macFrameworkPath": [],
