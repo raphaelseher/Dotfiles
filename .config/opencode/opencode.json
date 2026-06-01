@@ -1,5 +1,19 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "provider": {},
-  "plugin": ["@slkiser/opencode-quota"]
+  "provider": {
+  "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen3.6:27b": {
+          "name": "qwen3.6:27b",
+          "reasoning": true,
+        },
+      }
+    }
+  },
+  "plugin": ["@slkiser/opencode-quota", "opencode-claude-auth@latest"]
 }
