@@ -17,20 +17,5 @@ require("mappings")
 require("lazy").setup("plugins", {})
 
 require("commands")
---
--- require("plugins")
---
--- require("uiconfiguration")
---
---
--- require("lsp")
---
--- require("linter")
---
--- require("formatter")
---
--- require("theme")
---
--- require("debugger")
---
+
 require("local_rc").load()
