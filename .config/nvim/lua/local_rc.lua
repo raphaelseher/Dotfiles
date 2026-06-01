@@ -1,25 +1,17 @@
-local ffi = require("ffi")
-local lfs = require("lfs")
-ffi.cdef([[
- int getuid(void);
-]])
-
-local function file_owned_by_me(file)
-	return ffi.C.getuid() == lfs.attributes(file).uid
-end
-
-local function file_exists(file)
-	return lfs.attributes(file) ~= nil
-end
+local uv = vim.uv
 
 local function load()
 	local local_rc_name = ".nvimrc.lua"
-	if file_exists(local_rc_name) then
-		if file_owned_by_me(local_rc_name) then
-			dofile(local_rc_name)
-		else
-			print(local_rc_name .. " exists but is not loaded. Security reason: a diffent owner.")
-		end
+	local stat = uv.fs_stat(local_rc_name)
+
+	if not stat then
+		return
+	end
+
+	if stat.uid == uv.getuid() then
+		dofile(local_rc_name)
+	else
+		print(local_rc_name .. " exists but is not loaded. Security reason: a different owner.")
 	end
 end
 
