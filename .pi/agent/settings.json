@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "1.3.0",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-4-8",
+  "packages": [
+    "npm:pi-web-access"
+  ],
+  "hideThinkingBlock": false,
+  "enabledModels": [
+    "anthropic/claude-opus-5-5",
+    "anthropic/claude-sonnet-5-5",
+    "mistral/mistral-medium-3.5"
+  ],
+  "theme": "system"
+}
