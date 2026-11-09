@@ -1,19 +1,54 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "provider": {
-  "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama",
-      "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
-      },
+  "providers": {
+    "netcup": {
+      "name": "netcup LLM Inference",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": { "baseURL": "https://llm-gateway.netcup.net/v1" },
       "models": {
-        "qwen3.6:27b": {
-          "name": "qwen3.6:27b",
-          "reasoning": true,
+        "DeepSeek-V4-Flash-0731": {
+          "name": "DeepSeek V4 Flash 0731",
+          "capabilities": { "tools": true, "input": ["text"], "output": ["text"] },
+          "limit": { "context": 1048576, "output": 393216 },
+          "settings": { "reasoningEffort": "high" },
+          "variants": [
+            { "id": "off", "settings": { "reasoningEffort": "none" } },
+            { "id": "low", "settings": { "reasoningEffort": "low" } },
+            { "id": "max", "settings": { "reasoningEffort": "max" } }
+          ]
         },
+        "Qwen3.8-27B-FP8": {
+          "name": "Qwen3.8 27B FP8",
+          "capabilities": { "tools": true, "input": ["text", "image", "video"], "output": ["text"] },
+          "limit": { "context": 262144, "output": 131072 },
+          "settings": { "reasoningEffort": "xhigh" },
+          "variants": [
+            { "id": "off", "settings": { "reasoningEffort": "none" } },
+            { "id": "low", "settings": { "reasoningEffort": "low" } },
+            { "id": "medium", "settings": { "reasoningEffort": "medium" } }
+          ]
+        },
+        "Qwen3.6-35B-A3B": {
+          "name": "Qwen3.6 35B A3B",
+          "capabilities": { "tools": true, "input": ["text", "image", "video"], "output": ["text"] },
+          "limit": { "context": 262144, "output": 32768 },
+          "settings": { "reasoningEffort": "high" },
+          "variants": [
+            { "id": "off", "settings": { "reasoningEffort": "none" } }
+          ]
+        },
+        "gemma-4-26B-A4B": {
+          "name": "Gemma 4 26B A4B",
+          "capabilities": { "tools": true, "input": ["text", "image", "video"], "output": ["text"] },
+          "limit": { "context": 262144, "output": 16384 },
+          "variants": [
+            { "id": "on", "settings": { "reasoningEffort": "high" } }
+          ]
+        }
       }
     }
   },
-  "plugin": ["@slkiser/opencode-quota", "opencode-claude-auth@latest"]
+  "plugins": [
+    "@slkiser/opencode-quota"
+  ]
 }
